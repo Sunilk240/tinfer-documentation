@@ -1,0 +1,202 @@
+/* ============================================
+   Tinfer Documentation — Custom Theme
+   LangChain-inspired dark theme with green accent
+   ============================================ */
+
+/* ---------- Brand Colors ---------- */
+:root {
+  --md-primary-fg-color: #0d1117;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #06D6A0;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0d1117;
+  --md-primary-bg-color: #c9d1d9;
+  --md-default-bg-color: #0d1117;
+  --md-accent-fg-color: #06D6A0;
+  --md-typeset-a-color: #06D6A0;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: #0d1117;
+  --md-accent-fg-color: #059669;
+  --md-typeset-a-color: #059669;
+}
+
+/* ---------- Header ---------- */
+.md-header {
+  background: #0d1117 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="default"] .md-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Navigation ---------- */
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color) !important;
+}
+
+.md-tabs__link--active {
+  border-bottom: 2px solid var(--md-accent-fg-color);
+}
+
+/* ---------- Content ---------- */
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.4em;
+  margin-top: 2em;
+}
+
+[data-md-color-scheme="default"] .md-typeset h2 {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Code Blocks ---------- */
+.md-typeset code {
+  border-radius: 4px;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre>code {
+  background: #161b22;
+}
+
+/* ---------- Feature Grid ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.grid-item {
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.grid-item:hover {
+  border-color: var(--md-accent-fg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 214, 160, 0.1);
+}
+
+[data-md-color-scheme="default"] .grid-item {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.grid-item h3 {
+  margin-top: 0 !important;
+  font-size: 1rem;
+}
+
+.grid-item p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ---------- Tables ---------- */
+.md-typeset table:not([class]) th {
+  background: rgba(6, 214, 160, 0.1);
+  font-weight: 600;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background: rgba(5, 150, 105, 0.1);
+}
+
+/* ---------- Admonitions ---------- */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: #06D6A0;
+}
+
+/* ---------- Left Sidebar (Navigation) ---------- */
+.md-sidebar--primary .md-sidebar__inner {
+  background: rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(6, 214, 160, 0.15);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 0.8rem;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__inner {
+  background: rgba(0, 0, 0, 0.02);
+  border-right-color: rgba(5, 150, 105, 0.2);
+}
+
+.md-sidebar--primary .md-nav__item {
+  padding: 0.15rem 0;
+}
+
+.md-sidebar--primary .md-nav__link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Tinfer brand label in sidebar */
+.md-nav--primary>.md-nav__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(6, 214, 160, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Right Sidebar (Table of Contents) ---------- */
+.md-sidebar--secondary .md-sidebar__inner {
+  background: rgba(255, 255, 255, 0.015);
+  border-left: 1px solid rgba(6, 214, 160, 0.12);
+  border-radius: 8px 0 0 8px;
+  padding: 1rem 0.6rem;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--secondary .md-sidebar__inner {
+  background: rgba(0, 0, 0, 0.015);
+  border-left-color: rgba(5, 150, 105, 0.15);
+}
+
+.md-sidebar--secondary .md-nav__title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-accent-fg-color);
+  opacity: 0.9;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(6, 214, 160, 0.15);
+  margin-bottom: 0.4rem;
+}
+
+.md-sidebar--secondary .md-nav__link {
+  font-size: 0.75rem;
+}
+
+.md-sidebar--secondary .md-nav__link--active {
+  border-left: 2px solid var(--md-accent-fg-color);
+  padding-left: 0.5rem;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.md-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
