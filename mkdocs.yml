@@ -1,0 +1,75 @@
+site_name: Tinfer
+site_url: https://sunilk240.github.io/tinfer/
+site_description: Tiny Inference Engine — Run LLMs locally with GPU acceleration
+site_author: Sunil Kumawat
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Model Download: models.md
+  - CLI Reference: cli.md
+  - Server Reference: server.md
+  - API Reference: api.md
+  - Python SDK: python-sdk.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Sunilk240/tinfer
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/tinfer-ai/
