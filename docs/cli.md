@@ -77,7 +77,88 @@ tinfer -m model.gguf -p "Hello" -ngl 99
 | `--no-host` | Bypass host buffer | off |
 | `-cmoe, --cpu-moe` | Keep all MoE weights in CPU | off |
 
-## RoPE / Context Extension
+## Layer Offloading
+
+Run models **larger than your GPU VRAM** by dynamically swapping layers between Disk, CPU, and GPU using a sliding window with async prefetching.
+
+```bash
+# Auto-detect window size based on free VRAM
+tinfer -m model.gguf -ngl 5 --layer-window auto -p "Hello" -n 100
+
+# Manual window size (4 CPU layers windowed at a time)
+tinfer -m model.gguf -ngl 5 --layer-window 4 -p "Hello" -n 100
+```
+
+**How it works:** When `-ngl` is less than total layers, remaining layers normally compute on slow CPU. Layer offloading instead keeps a sliding **window** of N layers in GPU staging buffers, temporarily swapping them in for fast GPU compute, then swapping back.
+
+| Tier | Location | Behavior |
+|------|----------|----------|
+| **GPU** | VRAM (permanent) | Controlled by `-ngl`, always on GPU |
+| **CPU** | System RAM | Windowed into GPU staging as needed |
+| **Disk** | GGUF file | Loaded into CPU cache on demand (LRU eviction) |
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--layer-window N` | `auto` = detect from free VRAM, or exact number of layers to window (env: `LLAMA_ARG_LAYER_WINDOW`) | 0 (disabled) |
+| `--no-layer-prefetch` | Disable async prefetching of next window | enabled |
+
+!!! tip
+    Use `--layer-window auto` with a small `-ngl` to run models that don't fit in VRAM. The system will auto-detect how many layers it can window through GPU staging.
+
+## PagedAttention
+
+Reduces KV cache memory fragmentation and enables efficient context shifting for multi-sequence workloads.
+
+```bash
+# Enable PagedAttention
+tinfer -m model.gguf --kv-cache-paged -p "Hello" -n 100
+```
+
+**How it works:** Instead of a contiguous ring buffer, the KV cache is divided into fixed-size **blocks** (32 tokens). Sequences map positions to physical blocks via a block table — like OS virtual memory paging.
+
+**Benefits:**
+
+- **Zero fragmentation** — blocks allocated on demand, no wasted gaps
+- **O(1) context shift** — remap blocks instead of moving data
+- **Copy-on-Write** — shared sequences (beam search) share blocks until written
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--kv-cache-paged` | Enable paged KV cache | disabled |
+| `--no-kv-cache-paged` | Disable paged KV cache | — |
+
+## KV Cache Eviction
+
+Intelligently removes KV cache entries when full, enabling **infinite-length text generation** without quality loss from context shifting.
+
+```bash
+# StreamingLLM mode: keep sinks + recent, evict oldest middle
+tinfer -m model.gguf --kv-eviction 1 --ctx-size 2048 -p "Hello" -n 5000
+
+# Scored mode: evict least-recently-accessed (better quality)
+tinfer -m model.gguf --kv-eviction 2 --ctx-size 2048 -p "Hello" -n 5000
+
+# Protect a 128-token system prompt from eviction
+tinfer -m model.gguf --kv-eviction 1 --kv-sink-tokens 8 --kv-protected-tokens 128
+```
+
+**How it works:** When the cache fills, instead of discarding the oldest half (context shift), smart eviction selectively removes individual entries:
+
+1. **Sink tokens** — first N positions always kept (attention sinks)
+2. **Protected tokens** — system prompt or critical prefix preserved
+3. **Recent window** — last 25% of each sequence preserved
+
+| Mode | Flag | Strategy | Best For |
+|------|------|----------|----------|
+| **Disabled** | `--kv-eviction 0` | Falls back to context shift | Default |
+| **Streaming** | `--kv-eviction 1` | Evict oldest middle tokens | Simple, fast |
+| **Scored** | `--kv-eviction 2` | Evict least-recently-accessed | Better quality |
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--kv-eviction MODE` | Eviction mode: 0=none, 1=streaming, 2=scored | 0 |
+| `--kv-sink-tokens N` | Initial positions to always keep (0-256) | 4 |
+| `--kv-protected-tokens N` | Positions to protect (e.g. system prompt length) | 0 |
 
 | Flag | Description | Default |
 |------|-------------|---------|

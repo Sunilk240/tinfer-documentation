@@ -23,6 +23,18 @@ HTTP server with a built-in chat interface at `localhost:8080`.
 Drop-in replacement for OpenAI's `/v1/chat/completions` endpoint.
 </div>
 <div class="grid-item" markdown>
+### 📦 Layer Offloading
+Run models larger than VRAM — dynamic Disk → CPU → GPU layer swapping.
+</div>
+<div class="grid-item" markdown>
+### 🧩 PagedAttention
+Zero-fragmentation KV cache with O(1) context shifting and Copy-on-Write.
+</div>
+<div class="grid-item" markdown>
+### ♻️ KV Cache Eviction
+Infinite-length generation — smart eviction keeps critical tokens.
+</div>
+<div class="grid-item" markdown>
 ### 🚀 CUDA GPU Acceleration
 Offload layers to your NVIDIA GPU for faster inference.
 </div>

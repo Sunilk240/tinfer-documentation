@@ -118,6 +118,46 @@ After starting, open **http://localhost:8080** in your browser for the chat WebU
 | `--models-max N` | Max models loaded simultaneously (env: `LLAMA_ARG_MODELS_MAX`) | 4 |
 | `--models-autoload, --no-models-autoload` | Auto-load models (env: `LLAMA_ARG_MODELS_AUTOLOAD`) | enabled |
 
+## Layer Offloading
+
+Run models larger than VRAM by dynamically swapping layers between Disk → CPU → GPU.
+
+```bash
+tinfer-server -m model.gguf -ngl 5 --layer-window auto --port 8080
+```
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--layer-window N` | `auto` or exact layer count to window through GPU (env: `LLAMA_ARG_LAYER_WINDOW`) | 0 (disabled) |
+| `--no-layer-prefetch` | Disable async prefetching of next window | enabled |
+
+## PagedAttention
+
+Paged KV cache for zero-fragmentation memory and O(1) context shifting.
+
+```bash
+tinfer-server -m model.gguf --kv-cache-paged --port 8080
+```
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--kv-cache-paged` | Enable paged KV cache | disabled |
+| `--no-kv-cache-paged` | Disable paged KV cache | — |
+
+## KV Cache Eviction
+
+Smart eviction for infinite-length generation without context shift quality loss.
+
+```bash
+tinfer-server -m model.gguf --kv-eviction 1 --port 8080
+```
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--kv-eviction MODE` | 0=none, 1=streaming, 2=scored | 0 |
+| `--kv-sink-tokens N` | Positions to always keep (0-256) | 4 |
+| `--kv-protected-tokens N` | Protected positions (e.g. system prompt) | 0 |
+
 ## Speculative Decoding
 
 | Flag | Description | Default |
