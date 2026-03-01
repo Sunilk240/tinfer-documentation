@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -347,6 +347,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vision-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👁️ Vision &amp; OCR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-reranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Embedding &amp; Reranking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lora-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 LoRA Fine-Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#layer-offloading" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -402,10 +435,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vision-models" class="md-nav__link">
+  <a href="#pip-install" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️ Vision Models
+        📥 pip Install
       
     </span>
   </a>
@@ -558,6 +591,33 @@
   
   
     <li class="md-nav__item">
+      <a href="inference-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inference Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="cli/" class="md-nav__link">
         
   
@@ -659,6 +719,87 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="layer-offloading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer Offloading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="paged-attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PagedAttention
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="kv-eviction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KV Cache Eviction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -733,6 +874,39 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vision-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        👁️ Vision &amp; OCR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-reranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Embedding &amp; Reranking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lora-fine-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 LoRA Fine-Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#layer-offloading" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -788,10 +962,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vision-models" class="md-nav__link">
+  <a href="#pip-install" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👁️ Vision Models
+        📥 pip Install
       
     </span>
   </a>
@@ -896,7 +1070,7 @@
 
 <h1 id="tinfer-tiny-inference-engine">Tinfer — Tiny Inference Engine<a class="headerlink" href="#tinfer-tiny-inference-engine" title="Permanent link">&para;</a></h1>
 <h2 id="run-llms-locally-with-gpu-acceleration">Run LLMs locally with GPU acceleration<a class="headerlink" href="#run-llms-locally-with-gpu-acceleration" title="Permanent link">&para;</a></h2>
-<p>Tinfer is a high-performance local inference engine for running large language models on your own hardware. No cloud, no API keys, no dependencies.</p>
+<p>Tinfer is a high-performance local inference engine built on top of <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a>. Run large language models on your own hardware — no cloud, no API keys, no C++ build tools.</p>
 <div class="grid-container">
 <div class="grid-item">
 <h3 id="cli-chat">⚡ CLI Chat<a class="headerlink" href="#cli-chat" title="Permanent link">&para;</a></h3>
@@ -909,6 +1083,18 @@
 <div class="grid-item">
 <h3 id="openai-compatible-api">🔌 OpenAI-Compatible API<a class="headerlink" href="#openai-compatible-api" title="Permanent link">&para;</a></h3>
 <p>Drop-in replacement for OpenAI's <code>/v1/chat/completions</code> endpoint.</p>
+</div>
+<div class="grid-item">
+<h3 id="vision-ocr">👁️ Vision &amp; OCR<a class="headerlink" href="#vision-ocr" title="Permanent link">&para;</a></h3>
+<p>Image understanding, visual QA, and OCR with multimodal models.</p>
+</div>
+<div class="grid-item">
+<h3 id="embedding-reranking">🔍 Embedding &amp; Reranking<a class="headerlink" href="#embedding-reranking" title="Permanent link">&para;</a></h3>
+<p>Generate text embeddings and rerank documents for semantic search.</p>
+</div>
+<div class="grid-item">
+<h3 id="lora-fine-tuning">🎯 LoRA Fine-Tuning<a class="headerlink" href="#lora-fine-tuning" title="Permanent link">&para;</a></h3>
+<p>Run fine-tuned models with LoRA adapters — hot-swap at runtime.</p>
 </div>
 <div class="grid-item">
 <h3 id="layer-offloading">📦 Layer Offloading<a class="headerlink" href="#layer-offloading" title="Permanent link">&para;</a></h3>
@@ -931,8 +1117,8 @@
 <p>Run Mixture-of-Experts models — 30B params at 3B speed.</p>
 </div>
 <div class="grid-item">
-<h3 id="vision-models">👁️ Vision Models<a class="headerlink" href="#vision-models" title="Permanent link">&para;</a></h3>
-<p>Multimodal support for image understanding and OCR.</p>
+<h3 id="pip-install">📥 pip Install<a class="headerlink" href="#pip-install" title="Permanent link">&para;</a></h3>
+<p><code>pip install tinfer-ai</code> — no C++ compiler or CMake needed.</p>
 </div>
 </div>
 <hr />
@@ -982,6 +1168,10 @@
 <td>Download GGUF models from HuggingFace</td>
 </tr>
 <tr>
+<td><a href="inference-types/">Inference Types</a></td>
+<td>Text, Vision, Embedding, Reranking, LoRA</td>
+</tr>
+<tr>
 <td><a href="cli/">CLI Reference</a></td>
 <td>All CLI flags and options</td>
 </tr>
@@ -996,6 +1186,18 @@
 <tr>
 <td><a href="python-sdk/">Python SDK</a></td>
 <td>Python client and server management</td>
+</tr>
+<tr>
+<td><a href="layer-offloading/">Layer Offloading</a></td>
+<td>Run models larger than VRAM</td>
+</tr>
+<tr>
+<td><a href="paged-attention/">PagedAttention</a></td>
+<td>Zero-fragmentation KV cache</td>
+</tr>
+<tr>
+<td><a href="kv-eviction/">KV Cache Eviction</a></td>
+<td>Infinite-length generation</td>
 </tr>
 </tbody>
 </table>

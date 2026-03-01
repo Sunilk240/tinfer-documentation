@@ -12,25 +12,31 @@
         <meta name="author" content="Sunil Kumawat">
       
       
+        <link rel="canonical" href="https://sunilk240.github.io/tinfer/paged-attention/">
       
+      
+        <link rel="prev" href="../layer-offloading/">
+      
+      
+        <link rel="next" href="../kv-eviction/">
       
       
         
       
       
-      <link rel="icon" href="/tinfer/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Tinfer</title>
+        <title>PagedAttention - Tinfer</title>
       
     
     
-      <link rel="stylesheet" href="/tinfer/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/tinfer/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="/tinfer/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/tinfer/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#pagedattention" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +98,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/tinfer/." title="Tinfer" class="md-header__button md-logo" aria-label="Tinfer" data-md-component="logo">
+    <a href=".." title="Tinfer" class="md-header__button md-logo" aria-label="Tinfer" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -107,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              PagedAttention
             
           </span>
         </div>
@@ -213,7 +224,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/tinfer/." title="Tinfer" class="md-nav__button md-logo" aria-label="Tinfer" data-md-component="logo">
+    <a href=".." title="Tinfer" class="md-nav__button md-logo" aria-label="Tinfer" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -231,7 +242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -258,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   
@@ -285,7 +296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/models/" class="md-nav__link">
+      <a href="../models/" class="md-nav__link">
         
   
   
@@ -312,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/inference-types/" class="md-nav__link">
+      <a href="../inference-types/" class="md-nav__link">
         
   
   
@@ -339,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         
   
   
@@ -366,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/server/" class="md-nav__link">
+      <a href="../server/" class="md-nav__link">
         
   
   
@@ -393,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/api/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         
   
   
@@ -420,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/python-sdk/" class="md-nav__link">
+      <a href="../python-sdk/" class="md-nav__link">
         
   
   
@@ -447,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/layer-offloading/" class="md-nav__link">
+      <a href="../layer-offloading/" class="md-nav__link">
         
   
   
@@ -471,10 +482,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/tinfer/paged-attention/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PagedAttention
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -490,6 +528,136 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Benefits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Block Size
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works-internally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works Internally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-pagedattention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use PagedAttention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -501,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tinfer/kv-eviction/" class="md-nav__link">
+      <a href="../kv-eviction/" class="md-nav__link">
         
   
   
@@ -538,6 +706,126 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Benefits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Block Size
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works-internally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works Internally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-use-pagedattention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use PagedAttention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -550,8 +838,169 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="pagedattention">PagedAttention<a class="headerlink" href="#pagedattention" title="Permanent link">&para;</a></h1>
+<p>PagedAttention is an experimental memory management feature for the KV cache that reduces memory fragmentation and enables efficient context shifting for multi-sequence workloads.</p>
+<hr />
+<h2 id="the-problem">The Problem<a class="headerlink" href="#the-problem" title="Permanent link">&para;</a></h2>
+<p>The default KV cache uses a <strong>contiguous ring buffer</strong>. When multiple sequences are active (e.g., parallel requests on a server), memory gets fragmented — gaps appear between sequences, wasting VRAM.</p>
+<h2 id="the-solution">The Solution<a class="headerlink" href="#the-solution" title="Permanent link">&para;</a></h2>
+<p>PagedAttention divides the KV cache into fixed-size <strong>blocks</strong> (default: 32 tokens). Sequences map logical token positions to physical blocks via a <strong>block table</strong> — similar to how an operating system manages virtual memory with paging.</p>
+<hr />
+<h2 id="key-benefits">Key Benefits<a class="headerlink" href="#key-benefits" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zero fragmentation</strong></td>
+<td>Blocks are allocated on demand — no wasted gaps between sequences</td>
+</tr>
+<tr>
+<td><strong>O(1) context shift</strong></td>
+<td>Remove or remap blocks in the table instead of moving actual data</td>
+</tr>
+<tr>
+<td><strong>Copy-on-Write (CoW)</strong></td>
+<td>Shared sequences (e.g., beam search) share blocks until one writes, then a copy is made</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Enable PagedAttention</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-cache-paged<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># With the server (great for multi-user)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-cache-paged<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Disable (default behavior)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--no-kv-cache-paged<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+</span></code></pre></div>
+<hr />
+<h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--kv-cache-paged</code></td>
+<td>disabled</td>
+<td>Enable paged KV cache</td>
+</tr>
+<tr>
+<td><code>--no-kv-cache-paged</code></td>
+<td>—</td>
+<td>Explicitly disable paged KV cache</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="block-size">Block Size<a class="headerlink" href="#block-size" title="Permanent link">&para;</a></h2>
+<p>The default block size is <strong>32 tokens</strong>, which aligns with:</p>
+<ul>
+<li>F16 KV cache</li>
+<li>Q8_0 quantized KV cache (quant block = 32)</li>
+<li>Q4_0 quantized KV cache (quant block = 32)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Q4_K quantization uses a quant block of 256, which may need a larger block size for optimal alignment. This is a future optimization.</p>
+</div>
+<hr />
+<h2 id="how-it-works-internally">How It Works Internally<a class="headerlink" href="#how-it-works-internally" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CLI (--kv-cache-paged)
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  → llama_context_params.kv_cache_paged
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  → llama_kv_cache constructor (paged=true)
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      → BlockAllocator (manages free block pool)
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      → BlockTable (maps seq_id → block list)
+</span></code></pre></div>
+<p><strong>BlockAllocator</strong> — manages a pool of free blocks. When a sequence needs more room, it allocates a block. When a sequence is removed, its blocks return to the free pool.</p>
+<p><strong>BlockTable</strong> — maps each sequence ID to a list of blocks. Lookup is O(1). Context shifting just remaps the table entries instead of copying data.</p>
+<hr />
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
+<p>Tested with SmolLM2-135M-Instruct-Q8_0 on CPU:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th style="text-align: center;">Prompt (tokens/sec)</th>
+<th style="text-align: center;">Generation (tokens/sec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baseline (ring buffer)</td>
+<td style="text-align: center;">374.8</td>
+<td style="text-align: center;">24.3</td>
+</tr>
+<tr>
+<td><strong>PagedAttention</strong></td>
+<td style="text-align: center;"><strong>512.5</strong></td>
+<td style="text-align: center;"><strong>27.6</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>No throughput regression</strong> — PagedAttention matches or exceeds baseline performance.</p>
+<hr />
+<h2 id="when-to-use-pagedattention">When to Use PagedAttention<a class="headerlink" href="#when-to-use-pagedattention" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single-user CLI chat</td>
+<td>Optional — minimal fragmentation anyway</td>
+</tr>
+<tr>
+<td><strong>Multi-user server</strong></td>
+<td><strong>Recommended</strong> — significant memory savings</td>
+</tr>
+<tr>
+<td>Beam search / parallel decoding</td>
+<td><strong>Recommended</strong> — CoW reduces memory by sharing</td>
+</tr>
+<tr>
+<td>Long context generation</td>
+<td><strong>Recommended</strong> — O(1) context shifting</td>
+</tr>
+</tbody>
+</table>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Block size is fixed at 32 (not yet configurable)</li>
+<li>Q4_K quantization may not align optimally with block_size=32</li>
+<li>No custom paged flash attention kernel yet (future optimization)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -620,10 +1069,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/tinfer/", "features": ["navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "/tinfer/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/tinfer/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

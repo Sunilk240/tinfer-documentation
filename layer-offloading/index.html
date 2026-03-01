@@ -12,13 +12,13 @@
         <meta name="author" content="Sunil Kumawat">
       
       
-        <link rel="canonical" href="https://sunilk240.github.io/tinfer/models/">
+        <link rel="canonical" href="https://sunilk240.github.io/tinfer/layer-offloading/">
       
       
-        <link rel="prev" href="../installation/">
+        <link rel="prev" href="../python-sdk/">
       
       
-        <link rel="next" href="../inference-types/">
+        <link rel="next" href="../paged-attention/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Model Download - Tinfer</title>
+        <title>Layer Offloading - Tinfer</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#model-download" class="md-skip">
+        <a href="#layer-offloading" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Model Download
+              Layer Offloading
             
           </span>
         </div>
@@ -293,37 +293,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Download
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
         
   
   
@@ -339,70 +312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#method-1-terminal-one-liner" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Method 1: Terminal One-Liner
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-2-python-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Method 2: Python Script
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#understanding-quantization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understanding Quantization
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#after-downloading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        After Downloading
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -546,10 +455,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../layer-offloading/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer Offloading
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -565,6 +501,142 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three Tiers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-auto-detection-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Auto-Detection Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#double-buffered-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double-Buffered Staging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -650,10 +722,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#method-1-terminal-one-liner" class="md-nav__link">
+  <a href="#the-problem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 1: Terminal One-Liner
+        The Problem
       
     </span>
   </a>
@@ -661,10 +733,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#method-2-python-script" class="md-nav__link">
+  <a href="#the-solution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 2: Python Script
+        The Solution
       
     </span>
   </a>
@@ -672,10 +744,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-quantization" class="md-nav__link">
+  <a href="#three-tiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding Quantization
+        Three Tiers
       
     </span>
   </a>
@@ -683,10 +755,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#after-downloading" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        After Downloading
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-auto-detection-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Auto-Detection Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#double-buffered-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double-Buffered Staging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
       
     </span>
   </a>
@@ -710,93 +854,137 @@
 
 
 
-<h1 id="model-download">Model Download<a class="headerlink" href="#model-download" title="Permanent link">&para;</a></h1>
-<p>Tinfer runs <strong>GGUF</strong> format models. You can download them from <a href="https://huggingface.co">HuggingFace</a> using any of the methods below.</p>
+<h1 id="layer-offloading">Layer Offloading<a class="headerlink" href="#layer-offloading" title="Permanent link">&para;</a></h1>
+<p>Layer offloading is an experimental feature that enables running models <strong>larger than your GPU VRAM</strong> by dynamically swapping layer weights between Disk, CPU, and GPU using a sliding window with async prefetching.</p>
 <hr />
-<h2 id="method-1-terminal-one-liner">Method 1: Terminal One-Liner<a class="headerlink" href="#method-1-terminal-one-liner" title="Permanent link">&para;</a></h2>
-<p>The quickest way to download a model directly from your terminal:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>huggingface-hub
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from huggingface_hub import hf_hub_download; import os; os.makedirs(&#39;models&#39;, exist_ok=True); hf_hub_download(repo_id=&#39;bartowski/Llama-3.2-3B-Instruct-GGUF&#39;, filename=&#39;Llama-3.2-3B-Instruct-Q4_K_M.gguf&#39;, local_dir=&#39;./models&#39;)&quot;</span>
-</span></code></pre></div>
-<p>Replace the <code>repo_id</code> and <code>filename</code> with any GGUF model from <a href="https://huggingface.co">HuggingFace</a>.</p>
-<h2 id="method-2-python-script">Method 2: Python Script<a class="headerlink" href="#method-2-python-script" title="Permanent link">&para;</a></h2>
-<p>For more control, use a Python script:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">huggingface_hub</span><span class="w"> </span><span class="kn">import</span> <span class="n">hf_hub_download</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Create models directory</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;models&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Download model</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">hf_hub_download</span><span class="p">(</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">repo_id</span><span class="o">=</span><span class="s1">&#39;bartowski/Llama-3.2-3B-Instruct-GGUF&#39;</span><span class="p">,</span>   <span class="c1"># HuggingFace repo</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Llama-3.2-3B-Instruct-Q4_K_M.gguf&#39;</span><span class="p">,</span>      <span class="c1"># Specific file</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">local_dir</span><span class="o">=</span><span class="s1">&#39;./models&#39;</span>                                 <span class="c1"># Where to save</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">)</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Use absolute paths</p>
-<p>When passing the model path to <code>tinfer</code> or <code>tinfer-server</code>, use the <strong>full absolute path</strong> to avoid errors.
-For example: <code>tinfer -m C:\Users\you\models\model.gguf</code> instead of <code>tinfer -m models/model.gguf</code>.</p>
-</div>
+<h2 id="the-problem">The Problem<a class="headerlink" href="#the-problem" title="Permanent link">&para;</a></h2>
+<p>When <code>-ngl</code> is less than the total layer count, the remaining layers compute on CPU, which is significantly slower. Users with limited VRAM are stuck with slow CPU inference for those layers.</p>
+<h2 id="the-solution">The Solution<a class="headerlink" href="#the-solution" title="Permanent link">&para;</a></h2>
+<p>Layer offloading keeps only a <strong>window</strong> of N layers in GPU staging buffers at a time. Before each layer computation:</p>
+<ol>
+<li><strong>Swap in</strong> — CPU layer weights are temporarily redirected to GPU staging via pointer swaps</li>
+<li><strong>Transfer</strong> — Weight data is copied from CPU → GPU staging buffer</li>
+<li><strong>Compute</strong> — GPU computes using the staged weights (fast!)</li>
+<li><strong>Swap back</strong> — Pointers are restored to original CPU locations</li>
+</ol>
+<p>This means even if you can only fit 5 layers permanently in VRAM, all layers still get <strong>GPU-speed compute</strong> through the sliding window.</p>
 <hr />
-<h2 id="understanding-quantization">Understanding Quantization<a class="headerlink" href="#understanding-quantization" title="Permanent link">&para;</a></h2>
-<p>GGUF models come in different quantization levels that trade quality for size:</p>
+<h2 id="three-tiers">Three Tiers<a class="headerlink" href="#three-tiers" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Quantization</th>
-<th style="text-align: center;">Quality</th>
-<th style="text-align: center;">Size</th>
-<th>Use Case</th>
+<th>Tier</th>
+<th>Location</th>
+<th>Behavior</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>Q8_0</strong></td>
-<td style="text-align: center;">Highest</td>
-<td style="text-align: center;">Largest</td>
-<td>Best quality, needs more RAM</td>
+<td><strong>GPU</strong></td>
+<td>VRAM (permanent)</td>
+<td>Controlled by <code>-ngl</code>, always on GPU</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Q5_K_M</strong></td>
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">Medium</td>
-<td>Good balance</td>
+<td><strong>CPU</strong></td>
+<td>System RAM</td>
+<td>Windowed into GPU staging as needed</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Q4_K_M</strong></td>
-<td style="text-align: center;">Good</td>
-<td style="text-align: center;">Small</td>
-<td><strong>Recommended</strong> — best size/quality ratio</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Q3_K_M</strong></td>
-<td style="text-align: center;">Acceptable</td>
-<td style="text-align: center;">Smaller</td>
-<td>Low-RAM systems</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Q2_K</strong></td>
-<td style="text-align: center;">Lower</td>
-<td style="text-align: center;">Smallest</td>
-<td>Extreme memory constraints</td>
+<td><strong>Disk</strong></td>
+<td>GGUF file</td>
+<td>Loaded into CPU cache on demand (LRU eviction)</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">What is MoE?</p>
-<p><strong>Mixture of Experts</strong> models have many total parameters but only activate a small subset per token. For example, GLM-4.7-Flash has 30B total parameters but only uses 3B at a time, giving you 30B-quality responses at 3B speed.</p>
-</div>
-<hr />
-<h2 id="after-downloading">After Downloading<a class="headerlink" href="#after-downloading" title="Permanent link">&para;</a></h2>
-<p>Once you have a model, you can use it with any Tinfer command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># CLI chat</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Start server</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Model: 48 layers total, -ngl 5
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Layer 0-42:  CPU tier  ─── windowed through GPU staging ───→ GPU compute
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Layer 43-47: GPU tier  ─── permanently on GPU ──────────────→ GPU compute
 </span></code></pre></div>
+<ul>
+<li><code>-ngl</code> controls how many layers are <strong>permanently</strong> on GPU</li>
+<li><code>--layer-window</code> controls how CPU-tier layers are <strong>temporarily</strong> windowed into GPU</li>
+<li>If <code>-ngl</code> covers all layers, <code>--layer-window</code> has no effect</li>
+</ul>
+<hr />
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Auto-detect window size based on free VRAM</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span>auto<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Manual window size (4 CPU layers windowed at a time)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span><span class="m">4</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Disable async prefetching (sync transfer only)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span>auto<span class="w"> </span>--no-layer-prefetch<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Works with the server too</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span>auto<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+</span></code></pre></div>
+<hr />
+<h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--layer-window N</code></td>
+<td><code>0</code> (disabled)</td>
+<td><code>auto</code> = detect from free VRAM, or exact number of layers to window. (env: <code>LLAMA_ARG_LAYER_WINDOW</code>)</td>
+</tr>
+<tr>
+<td><code>--no-layer-prefetch</code></td>
+<td>prefetch enabled</td>
+<td>Disable async prefetching of the next window</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-auto-detection-works">How Auto-Detection Works<a class="headerlink" href="#how-auto-detection-works" title="Permanent link">&para;</a></h2>
+<p>When you use <code>--layer-window auto</code>, the system:</p>
+<ol>
+<li>Measures free VRAM after loading the model</li>
+<li>Calculates the largest layer size</li>
+<li>Determines how many layers can fit in a double-buffered staging area</li>
+<li>Sets the window size accordingly</li>
+</ol>
+<hr />
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CLI (--layer-window N)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  → llama_model_params.layer_window / .layer_prefetch
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  → load_tensors(): init window, assign tiers, allocate staging
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  → process_ubatch(): swap_layer_to_gpu → graph_compute → swap_layer_to_cpu
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Phase A (scheduler-level):
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  Prefetch next split&#39;s inputs during current split compute
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Phase B (layer-level):
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  Sliding window of N layers on double-buffered GPU staging
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  Pointer swap preserves graph topology
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Phase C (disk tier):
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  Read layers from GGUF file via direct I/O
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  LRU CPU cache with eviction
+</span></code></pre></div>
+<h3 id="double-buffered-staging">Double-Buffered Staging<a class="headerlink" href="#double-buffered-staging" title="Permanent link">&para;</a></h3>
+<p>Two staging buffer slots allow computing from one while loading data into the other, enabling overlap of data transfer and computation.</p>
+<hr />
+<h2 id="key-design-decisions">Key Design Decisions<a class="headerlink" href="#key-design-decisions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Graph reuse preserved</strong> — only <code>tensor-&gt;data</code> and <code>tensor-&gt;buffer</code> pointers are swapped, graph nodes never change</li>
+<li><strong>Double-buffered staging</strong> — overlap data transfer and computation</li>
+<li><strong>Automatic tensor handling</strong> — adapts to upstream model struct changes automatically</li>
+</ul>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Pinned memory (<code>cudaMallocHost</code>) not yet used (fallback to <code>malloc</code>)</li>
+<li>Disk tier I/O is synchronous reads (not yet producer-consumer queued)</li>
+<li>Not yet tested with speculative decoding or multi-GPU split modes</li>
+</ul>
 
 
 

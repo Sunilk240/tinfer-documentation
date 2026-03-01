@@ -12,13 +12,11 @@
         <meta name="author" content="Sunil Kumawat">
       
       
-        <link rel="canonical" href="https://sunilk240.github.io/tinfer/installation/">
+        <link rel="canonical" href="https://sunilk240.github.io/tinfer/kv-eviction/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../paged-attention/">
       
-      
-        <link rel="next" href="../models/">
       
       
         
@@ -29,7 +27,7 @@
     
     
       
-        <title>Installation - Tinfer</title>
+        <title>KV Cache Eviction - Tinfer</title>
       
     
     
@@ -82,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#kv-cache-eviction" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              KV Cache Eviction
             
           </span>
         </div>
@@ -266,37 +264,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Installation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
         
   
   
@@ -312,92 +283,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-via-pip" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Install via pip
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verify-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verify Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#upgrade" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Upgrade
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uninstall" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Uninstall
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Next Steps
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -622,10 +507,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../kv-eviction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KV Cache Eviction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -641,6 +553,175 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-eviction-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Eviction Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Eviction Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-1-streaming-kv-eviction-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode 1: Streaming (--kv-eviction 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-2-scored-kv-eviction-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode 2: Scored (--kv-eviction 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flags
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-eviction-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Eviction Triggers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-sink-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Sink Tokens?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-system-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protecting System Prompts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safety-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -672,10 +753,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-via-pip" class="md-nav__link">
+  <a href="#the-problem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install via pip
+        The Problem
       
     </span>
   </a>
@@ -683,10 +764,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#the-solution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        The Solution
       
     </span>
   </a>
@@ -694,10 +775,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-installation" class="md-nav__link">
+  <a href="#two-eviction-modes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verify Installation
+        Two Eviction Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Eviction Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-1-streaming-kv-eviction-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode 1: Streaming (--kv-eviction 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-2-scored-kv-eviction-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode 2: Scored (--kv-eviction 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
       
     </span>
   </a>
@@ -705,10 +836,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#upgrade" class="md-nav__link">
+  <a href="#flags" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Upgrade
+        Flags
       
     </span>
   </a>
@@ -716,10 +847,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uninstall" class="md-nav__link">
+  <a href="#how-eviction-triggers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Uninstall
+        How Eviction Triggers
       
     </span>
   </a>
@@ -727,10 +858,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#what-are-sink-tokens" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Next Steps
+        What Are Sink Tokens?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-system-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protecting System Prompts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safety-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
       
     </span>
   </a>
@@ -754,66 +918,149 @@
 
 
 
-<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<h2 id="install-via-pip">Install via pip<a class="headerlink" href="#install-via-pip" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>tinfer-ai
+<h1 id="kv-cache-eviction">KV Cache Eviction<a class="headerlink" href="#kv-cache-eviction" title="Permanent link">&para;</a></h1>
+<p>Smart KV eviction is an experimental feature that intelligently removes KV cache entries when the cache is full, enabling <strong>infinite-length text generation</strong> without the quality degradation of context shifting.</p>
+<hr />
+<h2 id="the-problem">The Problem<a class="headerlink" href="#the-problem" title="Permanent link">&para;</a></h2>
+<p>When the KV cache fills up during long generation, the default behavior is <strong>context shifting</strong> — discarding the oldest half of the cache and shifting positions. This causes quality degradation because the model loses important context from the middle of the conversation.</p>
+<h2 id="the-solution">The Solution<a class="headerlink" href="#the-solution" title="Permanent link">&para;</a></h2>
+<p>Smart KV eviction selectively removes <strong>individual</strong> cache entries based on their importance, preserving:</p>
+<ol>
+<li><strong>Sink tokens</strong> — first N positions (attention sinks essential for model stability)</li>
+<li><strong>Protected tokens</strong> — system prompt or other critical prefix tokens</li>
+<li><strong>Recent window</strong> — last 25% of each sequence (actively being generated)</li>
+</ol>
+<p>Only the "middle" tokens — the least important for ongoing generation — are evicted.</p>
+<hr />
+<h2 id="two-eviction-modes">Two Eviction Modes<a class="headerlink" href="#two-eviction-modes" title="Permanent link">&para;</a></h2>
+<h3 id="mode-1-streaming-kv-eviction-1">Mode 1: Streaming (<code>--kv-eviction 1</code>)<a class="headerlink" href="#mode-1-streaming-kv-eviction-1" title="Permanent link">&para;</a></h3>
+<p>Evicts the <strong>oldest middle tokens</strong> first (position-based). Simple, fast, and reliable.</p>
+<p>Based on the <a href="https://arxiv.org/abs/2309.17453">StreamingLLM paper</a> — which discovered that the first few tokens ("attention sinks") receive disproportionate attention from the model. Keeping sinks + a recent window preserves generation quality even over very long contexts.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">1</span><span class="w"> </span>--ctx-size<span class="w"> </span><span class="m">2048</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">5000</span>
 </span></code></pre></div>
-<p>This installs all Tinfer components:</p>
-<ul>
-<li><code>tinfer</code> — CLI for chat and text completion</li>
-<li><code>tinfer-server</code> — HTTP server with WebUI</li>
-<li><code>tinfer-bench</code> — Model benchmarking tool</li>
-<li><code>tinfer-quantize</code> — Model quantization tool</li>
-</ul>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="mode-2-scored-kv-eviction-2">Mode 2: Scored (<code>--kv-eviction 2</code>)<a class="headerlink" href="#mode-2-scored-kv-eviction-2" title="Permanent link">&para;</a></h3>
+<p>Evicts the <strong>least-recently-accessed</strong> tokens first. Better quality for long conversations because it keeps tokens the model is actively referencing, regardless of their position.</p>
+<p>Inspired by <a href="https://arxiv.org/abs/2306.14048">H2O (Heavy-Hitter Oracle)</a> — which tracks cumulative attention scores to identify important tokens. This mode uses a lightweight access-recency approximation instead of full attention tracking.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">2</span><span class="w"> </span>--ctx-size<span class="w"> </span><span class="m">2048</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">5000</span>
+</span></code></pre></div>
+<h3 id="comparison">Comparison<a class="headerlink" href="#comparison" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Requirement</th>
-<th>Details</th>
+<th>Aspect</th>
+<th style="text-align: center;">Streaming (Mode 1)</th>
+<th style="text-align: center;">Scored (Mode 2)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Python</strong></td>
-<td>3.8 or higher</td>
+<td><strong>Strategy</strong></td>
+<td style="text-align: center;">Evict oldest middle tokens</td>
+<td style="text-align: center;">Evict least-recently-accessed</td>
 </tr>
 <tr>
-<td><strong>OS</strong></td>
-<td>Windows (x64)</td>
+<td><strong>Speed</strong></td>
+<td style="text-align: center;">Faster (no scoring overhead)</td>
+<td style="text-align: center;">Slightly slower</td>
 </tr>
 <tr>
-<td><strong>GPU</strong> (optional)</td>
-<td>NVIDIA GPU with CUDA support for acceleration</td>
+<td><strong>Quality</strong></td>
+<td style="text-align: center;">Good</td>
+<td style="text-align: center;">Better for long conversations</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td style="text-align: center;">Simple generation, speed-critical</td>
+<td style="text-align: center;">Multi-turn chat, document processing</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">GPU is optional</p>
-<p>Tinfer works on CPU-only systems. GPU acceleration speeds up inference but is not required. Models will automatically use your GPU if CUDA is detected.</p>
-</div>
-<h2 id="verify-installation">Verify Installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h2>
-<p>After installing, verify that the commands are available:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Check CLI version</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tinfer<span class="w"> </span>--version
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Check server version</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>tinfer-server<span class="w"> </span>--version
+<hr />
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Streaming mode</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">1</span><span class="w"> </span>--ctx-size<span class="w"> </span><span class="m">2048</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">5000</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Scored mode (better quality)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">2</span><span class="w"> </span>--ctx-size<span class="w"> </span><span class="m">2048</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">5000</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Custom sink + protected tokens</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">1</span><span class="w"> </span>--kv-sink-tokens<span class="w"> </span><span class="m">8</span><span class="w"> </span>--kv-protected-tokens<span class="w"> </span><span class="m">128</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Works with the server</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">1</span><span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Disabled (default, falls back to context shift)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">0</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
 </span></code></pre></div>
-<p>You should see output similar to:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ggml_cuda_init: found 1 CUDA devices:
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  Device 0: NVIDIA GeForce ..., compute capability X.X, VMM: yes
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>version: XXXX (commit hash)
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Tinfer build: XXXX (commit) with MSVC XX for x64
+<hr />
+<h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--kv-eviction MODE</code></td>
+<td><code>0</code> (disabled)</td>
+<td><code>0</code> = none (context shift), <code>1</code> = streaming, <code>2</code> = scored</td>
+</tr>
+<tr>
+<td><code>--kv-sink-tokens N</code></td>
+<td><code>4</code></td>
+<td>Number of initial positions to always keep (range: 0–256). These are "attention sinks" — tokens the model always references.</td>
+</tr>
+<tr>
+<td><code>--kv-protected-tokens N</code></td>
+<td><code>0</code></td>
+<td>Number of positions to protect from eviction. Set this to your system prompt length to ensure it's never evicted.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-eviction-triggers">How Eviction Triggers<a class="headerlink" href="#how-eviction-triggers" title="Permanent link">&para;</a></h2>
+<p>Eviction happens automatically — no manual intervention needed:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>prepare() fails (no free slots)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  → evict_cells(32+)    ← removes least important tokens
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  → retry prepare()
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  → success!             ← generation continues seamlessly
 </span></code></pre></div>
-<h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>tinfer-ai
+<p>If eviction can't free enough cells (everything is protected), it falls back to the standard failure path.</p>
+<hr />
+<h2 id="what-are-sink-tokens">What Are Sink Tokens?<a class="headerlink" href="#what-are-sink-tokens" title="Permanent link">&para;</a></h2>
+<p><strong>Attention sinks</strong> are the first few tokens in a sequence that consistently receive high attention scores from the model, regardless of their actual content. This was discovered by the StreamingLLM paper.</p>
+<p>Why they matter:</p>
+<ul>
+<li>The model's attention mechanism relies on these positions as "anchors"</li>
+<li>Removing them destabilizes generation and causes quality collapse</li>
+<li>Even with a 2K context, keeping just 4 sink tokens prevents degradation</li>
+</ul>
+<p>The default of <code>--kv-sink-tokens 4</code> works well for most models.</p>
+<hr />
+<h2 id="protecting-system-prompts">Protecting System Prompts<a class="headerlink" href="#protecting-system-prompts" title="Permanent link">&para;</a></h2>
+<p>If you use a system prompt (e.g., 128 tokens of instructions), protect it from eviction:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--kv-eviction<span class="w"> </span><span class="m">2</span><span class="w"> </span>--kv-protected-tokens<span class="w"> </span><span class="m">128</span><span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
 </span></code></pre></div>
-<h2 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>uninstall<span class="w"> </span>tinfer-ai
-</span></code></pre></div>
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>Once installed, <a href="../models/">download a model</a> and start using Tinfer!</p>
+<p>This ensures your system prompt stays in the cache even during very long conversations.</p>
+<hr />
+<h2 id="safety-features">Safety Features<a class="headerlink" href="#safety-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Shared cells preserved</strong> — cells used by multiple sequences are never evicted</li>
+<li><strong>Per-sequence recent window</strong> — protects <code>max(32, seq_len/4)</code> most recent positions per sequence</li>
+<li><strong>Input validation</strong> — range checks on all parameters</li>
+<li><strong>ISWA compatibility</strong> — only the base cache is evicted; SWA cache uses native sliding window</li>
+<li><strong>Zero impact when disabled</strong> — default <code>--kv-eviction 0</code> adds no runtime overhead</li>
+</ul>
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>No per-layer scoring (all layers share the same eviction decision)</li>
+<li>Scored mode uses access recency, not true attention weights (lightweight approximation)</li>
+<li>Not yet tested with speculative decoding</li>
+<li>Eviction granularity is per-cell (not per-block for PagedAttention mode)</li>
+</ul>
 
 
 
