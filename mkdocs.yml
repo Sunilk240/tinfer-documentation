@@ -39,10 +39,14 @@ nav:
   - Home: index.md
   - Installation: installation.md
   - Model Download: models.md
+  - Inference Types: inference-types.md
   - CLI Reference: cli.md
   - Server Reference: server.md
   - API Reference: api.md
   - Python SDK: python-sdk.md
+  - Layer Offloading: layer-offloading.md
+  - PagedAttention: paged-attention.md
+  - KV Cache Eviction: kv-eviction.md
 
 markdown_extensions:
   - admonition
