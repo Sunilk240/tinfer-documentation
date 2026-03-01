@@ -12,13 +12,13 @@
         <meta name="author" content="Sunil Kumawat">
       
       
-        <link rel="canonical" href="https://sunilk240.github.io/tinfer/models/">
+        <link rel="canonical" href="https://sunilk240.github.io/tinfer/benchmarking/">
       
       
-        <link rel="prev" href="../installation/">
+        <link rel="prev" href="../python-sdk/">
       
       
-        <link rel="next" href="../conversion/">
+        <link rel="next" href="../layer-offloading/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Model Download - Tinfer</title>
+        <title>Benchmarking - Tinfer</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#model-download" class="md-skip">
+        <a href="#benchmarking" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Model Download
+              Benchmarking
             
           </span>
         </div>
@@ -293,37 +293,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Download
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
         
   
   
@@ -339,70 +312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#method-1-terminal-one-liner" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Method 1: Terminal One-Liner
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-2-python-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Method 2: Python Script
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#understanding-quantization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understanding Quantization
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#after-downloading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        After Downloading
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -600,10 +509,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../benchmarking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarking
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -619,6 +555,181 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What It Measures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What It Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Flags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="All Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model &amp; Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU &amp; Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-threading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPU &amp; Threading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kv-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KV Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output &amp; Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-value-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Value Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -731,10 +842,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#method-1-terminal-one-liner" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 1: Terminal One-Liner
+        Quick Start
       
     </span>
   </a>
@@ -742,10 +853,132 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#method-2-python-script" class="md-nav__link">
+  <a href="#what-it-measures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 2: Python Script
+        What It Measures
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What It Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Flags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="All Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model &amp; Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batch Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU &amp; Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-threading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CPU &amp; Threading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kv-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KV Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output &amp; Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-value-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Value Testing
       
     </span>
   </a>
@@ -753,21 +986,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-quantization" class="md-nav__link">
+  <a href="#export-results" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding Quantization
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#after-downloading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        After Downloading
+        Export Results
       
     </span>
   </a>
@@ -791,92 +1013,325 @@
 
 
 
-<h1 id="model-download">Model Download<a class="headerlink" href="#model-download" title="Permanent link">&para;</a></h1>
-<p>Tinfer runs <strong>GGUF</strong> format models. You can download them from <a href="https://huggingface.co">HuggingFace</a> using any of the methods below.</p>
+<h1 id="benchmarking">Benchmarking<a class="headerlink" href="#benchmarking" title="Permanent link">&para;</a></h1>
+<p>Measure inference speed (tokens/second) for prompt processing and text generation using <code>tinfer-bench</code>.</p>
 <hr />
-<h2 id="method-1-terminal-one-liner">Method 1: Terminal One-Liner<a class="headerlink" href="#method-1-terminal-one-liner" title="Permanent link">&para;</a></h2>
-<p>The quickest way to download a model directly from your terminal:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>huggingface-hub
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from huggingface_hub import hf_hub_download; import os; os.makedirs(&#39;models&#39;, exist_ok=True); hf_hub_download(repo_id=&#39;bartowski/Llama-3.2-3B-Instruct-GGUF&#39;, filename=&#39;Llama-3.2-3B-Instruct-Q4_K_M.gguf&#39;, local_dir=&#39;./models&#39;)&quot;</span>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Basic benchmark (uses GPU by default)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Benchmark with all layers on GPU</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Custom prompt/generation lengths</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-p<span class="w"> </span><span class="m">512</span><span class="w"> </span>-n<span class="w"> </span><span class="m">128</span><span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span>
 </span></code></pre></div>
-<p>Replace the <code>repo_id</code> and <code>filename</code> with any GGUF model from <a href="https://huggingface.co">HuggingFace</a>.</p>
-<h2 id="method-2-python-script">Method 2: Python Script<a class="headerlink" href="#method-2-python-script" title="Permanent link">&para;</a></h2>
-<p>For more control, use a Python script:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">huggingface_hub</span><span class="w"> </span><span class="kn">import</span> <span class="n">hf_hub_download</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Create models directory</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;models&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Download model</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">hf_hub_download</span><span class="p">(</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">repo_id</span><span class="o">=</span><span class="s1">&#39;bartowski/Llama-3.2-3B-Instruct-GGUF&#39;</span><span class="p">,</span>   <span class="c1"># HuggingFace repo</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Llama-3.2-3B-Instruct-Q4_K_M.gguf&#39;</span><span class="p">,</span>      <span class="c1"># Specific file</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">local_dir</span><span class="o">=</span><span class="s1">&#39;./models&#39;</span>                                 <span class="c1"># Where to save</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">)</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Use absolute paths</p>
-<p>When passing the model path to <code>tinfer</code> or <code>tinfer-server</code>, use the <strong>full absolute path</strong> to avoid errors.
-For example: <code>tinfer -m C:\Users\you\models\model.gguf</code> instead of <code>tinfer -m models/model.gguf</code>.</p>
-</div>
 <hr />
-<h2 id="understanding-quantization">Understanding Quantization<a class="headerlink" href="#understanding-quantization" title="Permanent link">&para;</a></h2>
-<p>GGUF models come in different quantization levels that trade quality for size:</p>
+<h2 id="what-it-measures">What It Measures<a class="headerlink" href="#what-it-measures" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Quantization</th>
-<th style="text-align: center;">Quality</th>
-<th style="text-align: center;">Size</th>
-<th>Use Case</th>
+<th>Metric</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>Q8_0</strong></td>
-<td style="text-align: center;">Highest</td>
-<td style="text-align: center;">Largest</td>
-<td>Best quality, needs more RAM</td>
+<td><strong>pp</strong> (prompt processing)</td>
+<td>Speed of processing the input prompt (tokens/sec)</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Q5_K_M</strong></td>
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">Medium</td>
-<td>Good balance</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Q4_K_M</strong></td>
-<td style="text-align: center;">Good</td>
-<td style="text-align: center;">Small</td>
-<td><strong>Recommended</strong> — best size/quality ratio</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Q3_K_M</strong></td>
-<td style="text-align: center;">Acceptable</td>
-<td style="text-align: center;">Smaller</td>
-<td>Low-RAM systems</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Q2_K</strong></td>
-<td style="text-align: center;">Lower</td>
-<td style="text-align: center;">Smallest</td>
-<td>Extreme memory constraints</td>
+<td><strong>tg</strong> (text generation)</td>
+<td>Speed of generating output tokens (tokens/sec)</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">What is MoE?</p>
-<p><strong>Mixture of Experts</strong> models have many total parameters but only activate a small subset per token. For example, GLM-4.7-Flash has 30B total parameters but only uses 3B at a time, giving you 30B-quality responses at 3B speed.</p>
-</div>
+<p>Higher values = faster. The output shows model name, size, backend, and throughput with standard deviation.</p>
+<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>| model                 |   size |  params | backend | ngl |  test  |         t/s |
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>| llama 256M Q8_0       | 136 MiB| 134.52 M| CUDA    |  99 | tg128  | 72.41 ± 11.67 |
+</span></code></pre></div>
 <hr />
-<h2 id="after-downloading">After Downloading<a class="headerlink" href="#after-downloading" title="Permanent link">&para;</a></h2>
-<p>Once you have a model, you can use it with any Tinfer command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># CLI chat</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+<h2 id="all-flags">All Flags<a class="headerlink" href="#all-flags" title="Permanent link">&para;</a></h2>
+<h3 id="model-input">Model &amp; Input<a class="headerlink" href="#model-input" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --model &lt;file&gt;</code></td>
+<td>Model file path (.gguf)</td>
+<td><code>models/7B/ggml-model-q4_0.gguf</code></td>
+</tr>
+<tr>
+<td><code>-p, --n-prompt &lt;n&gt;</code></td>
+<td>Number of prompt tokens to process</td>
+<td><code>512</code></td>
+</tr>
+<tr>
+<td><code>-n, --n-gen &lt;n&gt;</code></td>
+<td>Number of tokens to generate</td>
+<td><code>128</code></td>
+</tr>
+<tr>
+<td><code>-pg &lt;pp,tg&gt;</code></td>
+<td>Combined prompt + generation test (e.g. <code>-pg 512,128</code>)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>-d, --n-depth &lt;n&gt;</code></td>
+<td>Context depth for the test</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="batch-processing">Batch Processing<a class="headerlink" href="#batch-processing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-b, --batch-size &lt;n&gt;</code></td>
+<td>Batch size for prompt processing</td>
+<td><code>2048</code></td>
+</tr>
+<tr>
+<td><code>-ub, --ubatch-size &lt;n&gt;</code></td>
+<td>Micro-batch size</td>
+<td><code>512</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gpu-device">GPU &amp; Device<a class="headerlink" href="#gpu-device" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-ngl, --n-gpu-layers &lt;n&gt;</code></td>
+<td>Number of layers to offload to GPU</td>
+<td><code>99</code></td>
+</tr>
+<tr>
+<td><code>-mg, --main-gpu &lt;i&gt;</code></td>
+<td>Main GPU index</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>-sm, --split-mode &lt;mode&gt;</code></td>
+<td>Multi-GPU split: <code>none</code>, <code>layer</code>, <code>row</code></td>
+<td><code>layer</code></td>
+</tr>
+<tr>
+<td><code>-dev, --device &lt;dev0/dev1&gt;</code></td>
+<td>Specific devices to use</td>
+<td><code>auto</code></td>
+</tr>
+<tr>
+<td><code>-ts, --tensor-split &lt;t0/t1&gt;</code></td>
+<td>Tensor split ratios across GPUs</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>--list-devices</code></td>
+<td>List available devices and exit</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>-nkvo, --no-kv-offload &lt;0\|1&gt;</code></td>
+<td>Disable KV cache offloading to GPU</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>-fa, --flash-attn &lt;0\|1&gt;</code></td>
+<td>Enable flash attention</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cpu-threading">CPU &amp; Threading<a class="headerlink" href="#cpu-threading" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-t, --threads &lt;n&gt;</code></td>
+<td>Number of CPU threads</td>
+<td>auto-detect</td>
+</tr>
+<tr>
+<td><code>-C, --cpu-mask &lt;hex&gt;</code></td>
+<td>CPU affinity mask</td>
+<td><code>0x0</code></td>
+</tr>
+<tr>
+<td><code>--cpu-strict &lt;0\|1&gt;</code></td>
+<td>Strict CPU affinity</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>--poll &lt;0...100&gt;</code></td>
+<td>Poll percentage</td>
+<td><code>50</code></td>
+</tr>
+<tr>
+<td><code>-ncmoe, --n-cpu-moe &lt;n&gt;</code></td>
+<td>CPU MoE expert count</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>--numa &lt;mode&gt;</code></td>
+<td>NUMA mode: <code>distribute</code>, <code>isolate</code>, <code>numactl</code></td>
+<td>disabled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kv-cache">KV Cache<a class="headerlink" href="#kv-cache" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-ctk, --cache-type-k &lt;type&gt;</code></td>
+<td>KV cache key type: <code>f16</code>, <code>bf16</code>, <code>q8_0</code>, <code>q4_0</code>, etc.</td>
+<td><code>f16</code></td>
+</tr>
+<tr>
+<td><code>-ctv, --cache-type-v &lt;type&gt;</code></td>
+<td>KV cache value type</td>
+<td><code>f16</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="output-control">Output &amp; Control<a class="headerlink" href="#output-control" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --repetitions &lt;n&gt;</code></td>
+<td>Number of times to repeat each test</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td><code>-o, --output &lt;format&gt;</code></td>
+<td>Output format: <code>csv</code>, <code>json</code>, <code>jsonl</code>, <code>md</code>, <code>sql</code></td>
+<td><code>md</code></td>
+</tr>
+<tr>
+<td><code>-oe, --output-err &lt;format&gt;</code></td>
+<td>Stderr output format</td>
+<td><code>none</code></td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Verbose output</td>
+<td>off</td>
+</tr>
+<tr>
+<td><code>--progress</code></td>
+<td>Show progress indicators</td>
+<td>off</td>
+</tr>
+<tr>
+<td><code>--no-warmup</code></td>
+<td>Skip warmup runs</td>
+<td>off</td>
+</tr>
+<tr>
+<td><code>--prio &lt;-1\|0\|1\|2\|3&gt;</code></td>
+<td>Process priority</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>--delay &lt;seconds&gt;</code></td>
+<td>Delay between tests</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-mmp, --mmap &lt;0\|1&gt;</code></td>
+<td>Use memory-mapped I/O</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>-dio, --direct-io &lt;0\|1&gt;</code></td>
+<td>Use direct I/O</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>-embd, --embeddings &lt;0\|1&gt;</code></td>
+<td>Benchmark embedding mode</td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="multi-value-testing">Multi-Value Testing<a class="headerlink" href="#multi-value-testing" title="Permanent link">&para;</a></h2>
+<p>You can test multiple configurations in a single run by using comma-separated values:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Compare GPU vs CPU</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">0</span>,99
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Start server</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Test multiple prompt lengths</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-p<span class="w"> </span><span class="m">128</span>,256,512,1024<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Compare multiple models</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model-q4.gguf,model-q8.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># Range syntax: first-last+step</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-p<span class="w"> </span><span class="m">128</span>-1024+128<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span>
+</span></code></pre></div>
+<hr />
+<h2 id="export-results">Export Results<a class="headerlink" href="#export-results" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Export as CSV</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span><span class="w"> </span>-o<span class="w"> </span>csv<span class="w"> </span>&gt;<span class="w"> </span>results.csv
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Export as JSON</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span><span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>&gt;<span class="w"> </span>results.json
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Export as SQL</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span><span class="w"> </span>-o<span class="w"> </span>sql<span class="w"> </span>&gt;<span class="w"> </span>results.sql
 </span></code></pre></div>
 
 

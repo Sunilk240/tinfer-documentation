@@ -9,7 +9,15 @@
          <lastmod>2026-03-01</lastmod>
     </url>
     <url>
+         <loc>https://sunilk240.github.io/tinfer/benchmarking/</loc>
+         <lastmod>2026-03-01</lastmod>
+    </url>
+    <url>
          <loc>https://sunilk240.github.io/tinfer/cli/</loc>
+         <lastmod>2026-03-01</lastmod>
+    </url>
+    <url>
+         <loc>https://sunilk240.github.io/tinfer/conversion/</loc>
          <lastmod>2026-03-01</lastmod>
     </url>
     <url>
@@ -38,6 +46,10 @@
     </url>
     <url>
          <loc>https://sunilk240.github.io/tinfer/python-sdk/</loc>
+         <lastmod>2026-03-01</lastmod>
+    </url>
+    <url>
+         <loc>https://sunilk240.github.io/tinfer/quantization/</loc>
          <lastmod>2026-03-01</lastmod>
     </url>
     <url>

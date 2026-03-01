@@ -413,10 +413,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cuda-gpu-acceleration" class="md-nav__link">
+  <a href="#model-conversion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 CUDA GPU Acceleration
+        🔄 Model Conversion
       
     </span>
   </a>
@@ -424,10 +424,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#moe-support" class="md-nav__link">
+  <a href="#quantization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 MoE Support
+        📊 Quantization
       
     </span>
   </a>
@@ -435,10 +435,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pip-install" class="md-nav__link">
+  <a href="#benchmarking" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📥 pip Install
+        ⏱️ Benchmarking
       
     </span>
   </a>
@@ -591,6 +591,60 @@
   
   
     <li class="md-nav__item">
+      <a href="conversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Conversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quantization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="inference-types/" class="md-nav__link">
         
   
@@ -707,6 +761,33 @@
     
   
     Python SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="benchmarking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarking
   
 
     
@@ -940,10 +1021,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cuda-gpu-acceleration" class="md-nav__link">
+  <a href="#model-conversion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 CUDA GPU Acceleration
+        🔄 Model Conversion
       
     </span>
   </a>
@@ -951,10 +1032,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#moe-support" class="md-nav__link">
+  <a href="#quantization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 MoE Support
+        📊 Quantization
       
     </span>
   </a>
@@ -962,10 +1043,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pip-install" class="md-nav__link">
+  <a href="#benchmarking" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📥 pip Install
+        ⏱️ Benchmarking
       
     </span>
   </a>
@@ -1109,16 +1190,16 @@
 <p>Infinite-length generation — smart eviction keeps critical tokens.</p>
 </div>
 <div class="grid-item">
-<h3 id="cuda-gpu-acceleration">🚀 CUDA GPU Acceleration<a class="headerlink" href="#cuda-gpu-acceleration" title="Permanent link">&para;</a></h3>
-<p>Offload layers to your NVIDIA GPU for faster inference.</p>
+<h3 id="model-conversion">🔄 Model Conversion<a class="headerlink" href="#model-conversion" title="Permanent link">&para;</a></h3>
+<p>Convert HuggingFace models &amp; LoRA adapters to GGUF format.</p>
 </div>
 <div class="grid-item">
-<h3 id="moe-support">🧠 MoE Support<a class="headerlink" href="#moe-support" title="Permanent link">&para;</a></h3>
-<p>Run Mixture-of-Experts models — 30B params at 3B speed.</p>
+<h3 id="quantization">📊 Quantization<a class="headerlink" href="#quantization" title="Permanent link">&para;</a></h3>
+<p>30+ quantization types — shrink models up to 10x with minimal quality loss.</p>
 </div>
 <div class="grid-item">
-<h3 id="pip-install">📥 pip Install<a class="headerlink" href="#pip-install" title="Permanent link">&para;</a></h3>
-<p><code>pip install tinfer-ai</code> — no C++ compiler or CMake needed.</p>
+<h3 id="benchmarking">⏱️ Benchmarking<a class="headerlink" href="#benchmarking" title="Permanent link">&para;</a></h3>
+<p>Measure tokens/sec for prompt processing and text generation.</p>
 </div>
 </div>
 <hr />
@@ -1168,6 +1249,14 @@
 <td>Download GGUF models from HuggingFace</td>
 </tr>
 <tr>
+<td><a href="conversion/">Model Conversion</a></td>
+<td>Convert HuggingFace models &amp; LoRA to GGUF</td>
+</tr>
+<tr>
+<td><a href="quantization/">Quantization</a></td>
+<td>Reduce model size with 30+ quantization types</td>
+</tr>
+<tr>
 <td><a href="inference-types/">Inference Types</a></td>
 <td>Text, Vision, Embedding, Reranking, LoRA</td>
 </tr>
@@ -1186,6 +1275,10 @@
 <tr>
 <td><a href="python-sdk/">Python SDK</a></td>
 <td>Python client and server management</td>
+</tr>
+<tr>
+<td><a href="benchmarking/">Benchmarking</a></td>
+<td>Measure inference speed with tinfer-bench</td>
 </tr>
 <tr>
 <td><a href="layer-offloading/">Layer Offloading</a></td>

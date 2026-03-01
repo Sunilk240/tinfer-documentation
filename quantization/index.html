@@ -12,13 +12,13 @@
         <meta name="author" content="Sunil Kumawat">
       
       
-        <link rel="canonical" href="https://sunilk240.github.io/tinfer/models/">
+        <link rel="canonical" href="https://sunilk240.github.io/tinfer/quantization/">
       
       
-        <link rel="prev" href="../installation/">
+        <link rel="prev" href="../conversion/">
       
       
-        <link rel="next" href="../conversion/">
+        <link rel="next" href="../inference-types/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Model Download - Tinfer</title>
+        <title>Quantization - Tinfer</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#model-download" class="md-skip">
+        <a href="#quantization" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Model Download
+              Quantization
             
           </span>
         </div>
@@ -293,37 +293,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Download
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
         
   
   
@@ -339,70 +312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#method-1-terminal-one-liner" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Method 1: Terminal One-Liner
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#method-2-python-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Method 2: Python Script
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#understanding-quantization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understanding Quantization
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#after-downloading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        After Downloading
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -438,10 +347,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../quantization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quantization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -457,6 +393,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantization-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantization Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantization Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-best-qualitysize-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended (Best Quality/Size Ratio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-available-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Available Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Quantization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-importance-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Importance Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dry-run-check-size-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dry Run (Check Size Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserve-output-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preserve Output Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantization-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantization Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -731,10 +831,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#method-1-terminal-one-liner" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 1: Terminal One-Liner
+        Quick Start
       
     </span>
   </a>
@@ -742,10 +842,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#method-2-python-script" class="md-nav__link">
+  <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 2: Python Script
+        Syntax
       
     </span>
   </a>
@@ -753,10 +853,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-quantization" class="md-nav__link">
+  <a href="#quantization-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding Quantization
+        Quantization Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantization Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-best-qualitysize-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended (Best Quality/Size Ratio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all-available-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Available Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Options
       
     </span>
   </a>
@@ -764,10 +903,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#after-downloading" class="md-nav__link">
+  <a href="#examples" class="md-nav__link">
     <span class="md-ellipsis">
       
-        After Downloading
+        Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Quantization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-importance-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Importance Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dry-run-check-size-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dry Run (Check Size Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preserve-output-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preserve Output Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quantization-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantization Pipeline
       
     </span>
   </a>
@@ -791,92 +991,344 @@
 
 
 
-<h1 id="model-download">Model Download<a class="headerlink" href="#model-download" title="Permanent link">&para;</a></h1>
-<p>Tinfer runs <strong>GGUF</strong> format models. You can download them from <a href="https://huggingface.co">HuggingFace</a> using any of the methods below.</p>
+<h1 id="quantization">Quantization<a class="headerlink" href="#quantization" title="Permanent link">&para;</a></h1>
+<p>Reduce model size and speed up inference by quantizing GGUF models using <code>tinfer-quantize</code>.</p>
 <hr />
-<h2 id="method-1-terminal-one-liner">Method 1: Terminal One-Liner<a class="headerlink" href="#method-1-terminal-one-liner" title="Permanent link">&para;</a></h2>
-<p>The quickest way to download a model directly from your terminal:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>huggingface-hub
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from huggingface_hub import hf_hub_download; import os; os.makedirs(&#39;models&#39;, exist_ok=True); hf_hub_download(repo_id=&#39;bartowski/Llama-3.2-3B-Instruct-GGUF&#39;, filename=&#39;Llama-3.2-3B-Instruct-Q4_K_M.gguf&#39;, local_dir=&#39;./models&#39;)&quot;</span>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Quantize a model (input → output → type)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>tinfer-quantize<span class="w"> </span>model-f16.gguf<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>Q4_K_M
 </span></code></pre></div>
-<p>Replace the <code>repo_id</code> and <code>filename</code> with any GGUF model from <a href="https://huggingface.co">HuggingFace</a>.</p>
-<h2 id="method-2-python-script">Method 2: Python Script<a class="headerlink" href="#method-2-python-script" title="Permanent link">&para;</a></h2>
-<p>For more control, use a Python script:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">huggingface_hub</span><span class="w"> </span><span class="kn">import</span> <span class="n">hf_hub_download</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Create models directory</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;models&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Download model</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">hf_hub_download</span><span class="p">(</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">repo_id</span><span class="o">=</span><span class="s1">&#39;bartowski/Llama-3.2-3B-Instruct-GGUF&#39;</span><span class="p">,</span>   <span class="c1"># HuggingFace repo</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Llama-3.2-3B-Instruct-Q4_K_M.gguf&#39;</span><span class="p">,</span>      <span class="c1"># Specific file</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">local_dir</span><span class="o">=</span><span class="s1">&#39;./models&#39;</span>                                 <span class="c1"># Where to save</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">)</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Use absolute paths</p>
-<p>When passing the model path to <code>tinfer</code> or <code>tinfer-server</code>, use the <strong>full absolute path</strong> to avoid errors.
-For example: <code>tinfer -m C:\Users\you\models\model.gguf</code> instead of <code>tinfer -m models/model.gguf</code>.</p>
-</div>
 <hr />
-<h2 id="understanding-quantization">Understanding Quantization<a class="headerlink" href="#understanding-quantization" title="Permanent link">&para;</a></h2>
-<p>GGUF models come in different quantization levels that trade quality for size:</p>
+<h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tinfer-quantize [options] input.gguf [output.gguf] type [nthreads]
+</span></code></pre></div>
+<p>If <code>output.gguf</code> is omitted, the output file is auto-named based on the quantization type.</p>
+<hr />
+<h2 id="quantization-types">Quantization Types<a class="headerlink" href="#quantization-types" title="Permanent link">&para;</a></h2>
+<h3 id="recommended-best-qualitysize-ratio">Recommended (Best Quality/Size Ratio)<a class="headerlink" href="#recommended-best-qualitysize-ratio" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Quantization</th>
-<th style="text-align: center;">Quality</th>
-<th style="text-align: center;">Size</th>
-<th>Use Case</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Size (7B)</th>
+<th style="text-align: center;">Quality Loss</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>Q8_0</strong></td>
-<td style="text-align: center;">Highest</td>
-<td style="text-align: center;">Largest</td>
-<td>Best quality, needs more RAM</td>
+<td style="text-align: center;"><strong>Q4_K_M</strong></td>
+<td style="text-align: center;">4.58 GB</td>
+<td style="text-align: center;">+0.1754 ppl</td>
+<td>⭐ <strong>Best overall balance</strong> — recommended default</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>Q5_K_M</strong></td>
-<td style="text-align: center;">High</td>
-<td style="text-align: center;">Medium</td>
-<td>Good balance</td>
+<td style="text-align: center;">5.33 GB</td>
+<td style="text-align: center;">+0.0569 ppl</td>
+<td>Higher quality, slightly larger</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Q4_K_M</strong></td>
-<td style="text-align: center;">Good</td>
-<td style="text-align: center;">Small</td>
-<td><strong>Recommended</strong> — best size/quality ratio</td>
+<td style="text-align: center;"><strong>Q6_K</strong></td>
+<td style="text-align: center;">6.14 GB</td>
+<td style="text-align: center;">+0.0217 ppl</td>
+<td>Near-lossless quality</td>
 </tr>
 <tr>
-<td style="text-align: center;"><strong>Q3_K_M</strong></td>
-<td style="text-align: center;">Acceptable</td>
-<td style="text-align: center;">Smaller</td>
-<td>Low-RAM systems</td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>Q2_K</strong></td>
-<td style="text-align: center;">Lower</td>
-<td style="text-align: center;">Smallest</td>
-<td>Extreme memory constraints</td>
+<td style="text-align: center;"><strong>Q8_0</strong></td>
+<td style="text-align: center;">7.96 GB</td>
+<td style="text-align: center;">+0.0026 ppl</td>
+<td>Virtually lossless</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">What is MoE?</p>
-<p><strong>Mixture of Experts</strong> models have many total parameters but only activate a small subset per token. For example, GLM-4.7-Flash has 30B total parameters but only uses 3B at a time, giving you 30B-quality responses at 3B speed.</p>
+<h3 id="all-available-types">All Available Types<a class="headerlink" href="#all-available-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type</th>
+<th style="text-align: center;">Size (7B)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>F32</strong></td>
+<td style="text-align: center;">26.00 GB</td>
+<td>Full 32-bit float — no quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>BF16</strong></td>
+<td style="text-align: center;">14.00 GB</td>
+<td>BFloat16 — best for training checkpoints</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>F16</strong></td>
+<td style="text-align: center;">14.00 GB</td>
+<td>Float16 — standard unquantized</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q8_0</strong></td>
+<td style="text-align: center;">7.96 GB</td>
+<td>8-bit — virtually no quality loss</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q6_K</strong></td>
+<td style="text-align: center;">6.14 GB</td>
+<td>6-bit K-quant</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q5_K_M</strong></td>
+<td style="text-align: center;">5.33 GB</td>
+<td>5-bit K-quant mixed</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q5_K_S</strong></td>
+<td style="text-align: center;">5.21 GB</td>
+<td>5-bit K-quant small</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q5_1</strong></td>
+<td style="text-align: center;">5.65 GB</td>
+<td>5-bit legacy</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q5_0</strong></td>
+<td style="text-align: center;">5.21 GB</td>
+<td>5-bit legacy</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q4_K_M</strong></td>
+<td style="text-align: center;">4.58 GB</td>
+<td>4-bit K-quant mixed</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q4_K_S</strong></td>
+<td style="text-align: center;">4.37 GB</td>
+<td>4-bit K-quant small</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q4_1</strong></td>
+<td style="text-align: center;">4.78 GB</td>
+<td>4-bit legacy</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q4_0</strong></td>
+<td style="text-align: center;">4.34 GB</td>
+<td>4-bit legacy</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q3_K_L</strong></td>
+<td style="text-align: center;">4.03 GB</td>
+<td>3-bit K-quant large</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q3_K_M</strong></td>
+<td style="text-align: center;">3.74 GB</td>
+<td>3-bit K-quant medium</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q3_K_S</strong></td>
+<td style="text-align: center;">3.41 GB</td>
+<td>3-bit K-quant small</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q2_K</strong></td>
+<td style="text-align: center;">2.96 GB</td>
+<td>2-bit K-quant (significant quality loss)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Q2_K_S</strong></td>
+<td style="text-align: center;">2.96 GB</td>
+<td>2-bit K-quant small</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ4_NL</strong></td>
+<td style="text-align: center;">—</td>
+<td>4.50 bpw non-linear quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ4_XS</strong></td>
+<td style="text-align: center;">—</td>
+<td>4.25 bpw non-linear quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ3_M</strong></td>
+<td style="text-align: center;">—</td>
+<td>3.66 bpw quantization mix</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ3_S</strong></td>
+<td style="text-align: center;">—</td>
+<td>3.44 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ3_XS</strong></td>
+<td style="text-align: center;">—</td>
+<td>3.3 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ3_XXS</strong></td>
+<td style="text-align: center;">—</td>
+<td>3.06 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ2_M</strong></td>
+<td style="text-align: center;">—</td>
+<td>2.7 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ2_S</strong></td>
+<td style="text-align: center;">—</td>
+<td>2.5 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ2_XS</strong></td>
+<td style="text-align: center;">—</td>
+<td>2.31 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ2_XXS</strong></td>
+<td style="text-align: center;">—</td>
+<td>2.06 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ1_M</strong></td>
+<td style="text-align: center;">—</td>
+<td>1.75 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>IQ1_S</strong></td>
+<td style="text-align: center;">—</td>
+<td>1.56 bpw quantization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>TQ2_0</strong></td>
+<td style="text-align: center;">—</td>
+<td>2.06 bpw ternarization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>TQ1_0</strong></td>
+<td style="text-align: center;">—</td>
+<td>1.69 bpw ternarization</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>COPY</strong></td>
+<td style="text-align: center;">—</td>
+<td>Copy tensors without quantizing</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">IQ1/IQ2/Q2_K_S require importance matrix</p>
+<p>The extreme quantizations (IQ1_S, IQ1_M, IQ2_S, IQ2_XXS, IQ2_XS, Q2_K_S) <strong>require</strong> an importance matrix (<code>--imatrix</code>) to maintain acceptable quality.</p>
 </div>
 <hr />
-<h2 id="after-downloading">After Downloading<a class="headerlink" href="#after-downloading" title="Permanent link">&para;</a></h2>
-<p>Once you have a model, you can use it with any Tinfer command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># CLI chat</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--allow-requantize</code></td>
+<td>Allow re-quantizing already quantized tensors (⚠️ may reduce quality)</td>
+</tr>
+<tr>
+<td><code>--leave-output-tensor</code></td>
+<td>Leave <code>output.weight</code> un-quantized (increases size, may improve quality)</td>
+</tr>
+<tr>
+<td><code>--pure</code></td>
+<td>Disable K-quant mixtures — quantize all tensors to the same type</td>
+</tr>
+<tr>
+<td><code>--imatrix &lt;file&gt;</code></td>
+<td>Use importance matrix for optimized quantization</td>
+</tr>
+<tr>
+<td><code>--include-weights &lt;name&gt;</code></td>
+<td>Only apply importance matrix to matching tensors</td>
+</tr>
+<tr>
+<td><code>--exclude-weights &lt;name&gt;</code></td>
+<td>Exclude matching tensors from importance matrix</td>
+</tr>
+<tr>
+<td><code>--output-tensor-type &lt;type&gt;</code></td>
+<td>Set output tensor GGML type</td>
+</tr>
+<tr>
+<td><code>--token-embedding-type &lt;type&gt;</code></td>
+<td>Set token embedding GGML type</td>
+</tr>
+<tr>
+<td><code>--tensor-type &lt;name=type&gt;</code></td>
+<td>Quantize specific tensor(s) to a specific type</td>
+</tr>
+<tr>
+<td><code>--tensor-type-file &lt;file&gt;</code></td>
+<td>Load tensor type overrides from a file</td>
+</tr>
+<tr>
+<td><code>--prune-layers &lt;L0,L1,...&gt;</code></td>
+<td>Prune specific layers from the model (⚠️ advanced)</td>
+</tr>
+<tr>
+<td><code>--keep-split</code></td>
+<td>Keep the same shard structure as input</td>
+</tr>
+<tr>
+<td><code>--override-kv &lt;KEY=TYPE:VALUE&gt;</code></td>
+<td>Override model metadata (⚠️ advanced)</td>
+</tr>
+<tr>
+<td><code>--dry-run</code></td>
+<td>Calculate quantized size without performing quantization</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="basic-quantization">Basic Quantization<a class="headerlink" href="#basic-quantization" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># F16 → Q4_K_M (recommended)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer-quantize<span class="w"> </span>model-f16.gguf<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>Q4_K_M
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Start server</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Q8_0 → Q4_K_M</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer-quantize<span class="w"> </span>model-q8.gguf<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>Q4_K_M<span class="w"> </span>--allow-requantize
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Use 8 threads for faster quantization</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>tinfer-quantize<span class="w"> </span>model-f16.gguf<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>Q4_K_M<span class="w"> </span><span class="m">8</span>
+</span></code></pre></div>
+<h3 id="with-importance-matrix">With Importance Matrix<a class="headerlink" href="#with-importance-matrix" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Better quality quantization with imatrix</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>tinfer-quantize<span class="w"> </span>model-f16.gguf<span class="w"> </span>model-IQ4_XS.gguf<span class="w"> </span>IQ4_XS<span class="w"> </span>--imatrix<span class="w"> </span>imatrix.dat
+</span></code></pre></div>
+<h3 id="dry-run-check-size-only">Dry Run (Check Size Only)<a class="headerlink" href="#dry-run-check-size-only" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># See final size without actually quantizing</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>tinfer-quantize<span class="w"> </span>--dry-run<span class="w"> </span>model-f16.gguf<span class="w"> </span>Q4_K_M
+</span></code></pre></div>
+<h3 id="preserve-output-quality">Preserve Output Quality<a class="headerlink" href="#preserve-output-quality" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Keep output layer unquantized for better quality</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>tinfer-quantize<span class="w"> </span>model-f16.gguf<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>Q4_K_M<span class="w"> </span>--leave-output-tensor
+</span></code></pre></div>
+<hr />
+<h2 id="quantization-pipeline">Quantization Pipeline<a class="headerlink" href="#quantization-pipeline" title="Permanent link">&para;</a></h2>
+<p>The typical workflow for converting and quantizing a model:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Step 1: Convert HuggingFace model to GGUF (F16 or Q8_0)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>python<span class="w"> </span>conversion/convert_hf_to_gguf.py<span class="w"> </span>model-folder<span class="w"> </span>--outfile<span class="w"> </span>model-f16.gguf<span class="w"> </span>--outtype<span class="w"> </span>f16
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Step 2: Quantize to desired size</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>tinfer-quantize<span class="w"> </span>model-f16.gguf<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>Q4_K_M
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Step 3: Benchmark to verify speed</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>tinfer-bench<span class="w"> </span>-m<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">99</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1"># Step 4: Run inference</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model-Q4_K_M.gguf<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
 </span></code></pre></div>
 
 
