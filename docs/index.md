@@ -47,16 +47,16 @@ Zero-fragmentation KV cache with O(1) context shifting and Copy-on-Write.
 Infinite-length generation — smart eviction keeps critical tokens.
 </div>
 <div class="grid-item" markdown>
-### 🚀 CUDA GPU Acceleration
-Offload layers to your NVIDIA GPU for faster inference.
+### 🔄 Model Conversion
+Convert HuggingFace models & LoRA adapters to GGUF format.
 </div>
 <div class="grid-item" markdown>
-### 🧠 MoE Support
-Run Mixture-of-Experts models — 30B params at 3B speed.
+### 📊 Quantization
+30+ quantization types — shrink models up to 10x with minimal quality loss.
 </div>
 <div class="grid-item" markdown>
-### 📥 pip Install
-`pip install tinfer-ai` — no C++ compiler or CMake needed.
+### ⏱️ Benchmarking
+Measure tokens/sec for prompt processing and text generation.
 </div>
 </div>
 
@@ -111,11 +111,14 @@ with Server("model.gguf", port=8080) as s:
 |------|-------------|
 | [Installation](installation.md) | Install Tinfer via pip |
 | [Model Download](models.md) | Download GGUF models from HuggingFace |
+| [Model Conversion](conversion.md) | Convert HuggingFace models & LoRA to GGUF |
+| [Quantization](quantization.md) | Reduce model size with 30+ quantization types |
 | [Inference Types](inference-types.md) | Text, Vision, Embedding, Reranking, LoRA |
 | [CLI Reference](cli.md) | All CLI flags and options |
 | [Server Reference](server.md) | Server flags, WebUI, and configuration |
 | [API Reference](api.md) | OpenAI-compatible HTTP endpoints |
 | [Python SDK](python-sdk.md) | Python client and server management |
+| [Benchmarking](benchmarking.md) | Measure inference speed with tinfer-bench |
 | [Layer Offloading](layer-offloading.md) | Run models larger than VRAM |
 | [PagedAttention](paged-attention.md) | Zero-fragmentation KV cache |
 | [KV Cache Eviction](kv-eviction.md) | Infinite-length generation |
