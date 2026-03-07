@@ -76,6 +76,9 @@ python -c "from huggingface_hub import hf_hub_download; import os; os.makedirs('
 tinfer -m models/Llama-3.2-3B-Instruct-Q4_K_M.gguf -p "Hello, what is AI?"
 ```
 
+!!! tip "Try it instantly on Google Colab — no local setup needed!"
+    [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Sunilk240/tinfer-ai/blob/main/Tinfer_Setup.ipynb)
+
 ---
 
 ## Three Ways to Use Tinfer
@@ -122,3 +125,4 @@ with Server("model.gguf", port=8080) as s:
 | [Layer Offloading](layer-offloading.md) | Run models larger than VRAM |
 | [PagedAttention](paged-attention.md) | Zero-fragmentation KV cache |
 | [KV Cache Eviction](kv-eviction.md) | Infinite-length generation |
+| [Troubleshooting](troubleshooting.md) | Common issues and fixes |
