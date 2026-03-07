@@ -64,8 +64,21 @@ Once you have a model, you can use it with any Tinfer command:
 
 ```bash
 # CLI chat
-tinfer -m C:\path\to\model.gguf -p "Hello!" -n 100
+tinfer -m C:\path\to\model.gguf -p "Hello!" -n 100 -c 1024
 
 # Start server
-tinfer-server -m C:\path\to\model.gguf --port 8080
+tinfer-server -m C:\path\to\model.gguf --port 8080 -c 1024
 ```
+
+!!! info "What is `-c 1024`?"
+    The `-c` flag sets the **context size** — how much memory the model allocates for its conversation window. Without it, some models try to allocate 14 GB+ of RAM by default, which will crash on most systems. Start with `-c 1024` and increase if your hardware allows. See [Troubleshooting](troubleshooting.md) for details.
+
+---
+
+## Quick Start on Google Colab
+
+Want to try Tinfer instantly without installing anything locally? Open our ready-to-run notebook:
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Sunilk240/tinfer-ai/blob/main/Tinfer_Setup.ipynb)
+
+The notebook installs Tinfer, sets up the engine, downloads a model, and runs inference — all in under 5 minutes on a free T4 GPU.
