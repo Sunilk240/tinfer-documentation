@@ -399,6 +399,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#quick-start-on-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start on Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -704,6 +715,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -768,6 +806,17 @@
     <span class="md-ellipsis">
       
         After Downloading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-on-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start on Google Colab
       
     </span>
   </a>
@@ -873,11 +922,20 @@ For example: <code>tinfer -m C:\Users\you\models\model.gguf</code> instead of <c
 <h2 id="after-downloading">After Downloading<a class="headerlink" href="#after-downloading" title="Permanent link">&para;</a></h2>
 <p>Once you have a model, you can use it with any Tinfer command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># CLI chat</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span><span class="w"> </span>-c<span class="w"> </span><span class="m">1024</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Start server</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>C:<span class="se">\p</span>ath<span class="se">\t</span>o<span class="se">\m</span>odel.gguf<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span><span class="w"> </span>-c<span class="w"> </span><span class="m">1024</span>
 </span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">What is <code>-c 1024</code>?</p>
+<p>The <code>-c</code> flag sets the <strong>context size</strong> — how much memory the model allocates for its conversation window. Without it, some models try to allocate 14 GB+ of RAM by default, which will crash on most systems. Start with <code>-c 1024</code> and increase if your hardware allows. See <a href="../troubleshooting/">Troubleshooting</a> for details.</p>
+</div>
+<hr />
+<h2 id="quick-start-on-google-colab">Quick Start on Google Colab<a class="headerlink" href="#quick-start-on-google-colab" title="Permanent link">&para;</a></h2>
+<p>Want to try Tinfer instantly without installing anything locally? Open our ready-to-run notebook:</p>
+<p><a href="https://colab.research.google.com/github/Sunilk240/tinfer-ai/blob/main/Tinfer_Setup.ipynb"><img alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>The notebook installs Tinfer, sets up the engine, downloads a model, and runs inference — all in under 5 minutes on a free T4 GPU.</p>
 
 
 
