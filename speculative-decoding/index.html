@@ -12,13 +12,13 @@
         <meta name="author" content="Sunil Kumawat">
       
       
-        <link rel="canonical" href="https://sunilk240.github.io/tinfer/layer-offloading/">
+        <link rel="canonical" href="https://sunilk240.github.io/tinfer/speculative-decoding/">
       
       
-        <link rel="prev" href="../benchmarking/">
+        <link rel="prev" href="../kv-eviction/">
       
       
-        <link rel="next" href="../paged-attention/">
+        <link rel="next" href="../troubleshooting/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Layer Offloading - Tinfer</title>
+        <title>Speculative Decoding - Tinfer</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#layer-offloading" class="md-skip">
+        <a href="#speculative-decoding" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Layer Offloading
+              Speculative Decoding
             
           </span>
         </div>
@@ -536,37 +536,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Layer Offloading
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../layer-offloading/" class="md-nav__link">
         
   
   
@@ -582,142 +555,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Problem
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-solution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Solution
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#three-tiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Three Tiers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Start
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flags
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-auto-detection-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How Auto-Detection Works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#double-buffered-staging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Double-Buffered Staging
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-design-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Design Decisions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitations
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -780,10 +617,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../speculative-decoding/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Speculative Decoding
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -799,6 +663,148 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#two-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Approaches
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-draft-model-most-common" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Draft Model (Most Common)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-draftless-no-extra-model-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Draftless (No Extra Model Needed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-both-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Both Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tuning Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuning Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#draft-token-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Draft Token Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-gram-parameters-draftless" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        n-gram Parameters (Draftless)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-layer-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Layer Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading Statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec-type-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spec Type Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -857,88 +863,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-problem" class="md-nav__link">
+  <a href="#two-approaches" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Problem
+        Two Approaches
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-solution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Solution
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#three-tiers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Three Tiers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Start
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flags" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Flags
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-auto-detection-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How Auto-Detection Works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Architecture">
+    <nav class="md-nav" aria-label="Two Approaches">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#double-buffered-staging" class="md-nav__link">
+  <a href="#1-draft-model-most-common" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Double-Buffered Staging
+        1. Draft Model (Most Common)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-draftless-no-extra-model-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Draftless (No Extra Model Needed)
       
     </span>
   </a>
@@ -951,10 +902,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-design-decisions" class="md-nav__link">
+  <a href="#combining-both-methods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Design Decisions
+        Combining Both Methods
       
     </span>
   </a>
@@ -962,10 +913,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
+  <a href="#tuning-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Limitations
+        Tuning Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tuning Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#draft-token-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Draft Token Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#n-gram-parameters-draftless" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        n-gram Parameters (Draftless)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-layer-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Layer Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading Statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spec-type-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spec Type Reference
       
     </span>
   </a>
@@ -989,74 +1001,101 @@
 
 
 
-<h1 id="layer-offloading">Layer Offloading<a class="headerlink" href="#layer-offloading" title="Permanent link">&para;</a></h1>
-<p>Layer offloading is an experimental feature that enables running models <strong>larger than your GPU VRAM</strong> by dynamically swapping layer weights between Disk, CPU, and GPU using a sliding window with async prefetching.</p>
+<h1 id="speculative-decoding">Speculative Decoding<a class="headerlink" href="#speculative-decoding" title="Permanent link">&para;</a></h1>
+<p>Speculative decoding dramatically speeds up text generation by predicting multiple tokens ahead and verifying them in a single batch. The output is <strong>mathematically identical</strong> to running the model normally — but significantly faster.</p>
+<div class="admonition info">
+<p class="admonition-title">Why is it faster?</p>
+<p>Normally, the model generates tokens one-by-one. Speculative decoding predicts multiple tokens at once and verifies them in a single batch — computing n tokens together is much more efficient than computing them sequentially.</p>
+</div>
 <hr />
-<h2 id="the-problem">The Problem<a class="headerlink" href="#the-problem" title="Permanent link">&para;</a></h2>
-<p>When <code>-ngl</code> is less than the total layer count, the remaining layers compute on CPU, which is significantly slower. Users with limited VRAM are stuck with slow CPU inference for those layers.</p>
-<h2 id="the-solution">The Solution<a class="headerlink" href="#the-solution" title="Permanent link">&para;</a></h2>
-<p>Layer offloading keeps only a <strong>window</strong> of N layers in GPU staging buffers at a time. Before each layer computation:</p>
-<ol>
-<li><strong>Swap in</strong> — CPU layer weights are temporarily redirected to GPU staging via pointer swaps</li>
-<li><strong>Transfer</strong> — Weight data is copied from CPU → GPU staging buffer</li>
-<li><strong>Compute</strong> — GPU computes using the staged weights (fast!)</li>
-<li><strong>Swap back</strong> — Pointers are restored to original CPU locations</li>
-</ol>
-<p>This means even if you can only fit 5 layers permanently in VRAM, all layers still get <strong>GPU-speed compute</strong> through the sliding window.</p>
-<hr />
-<h2 id="three-tiers">Three Tiers<a class="headerlink" href="#three-tiers" title="Permanent link">&para;</a></h2>
+<h2 id="two-approaches">Two Approaches<a class="headerlink" href="#two-approaches" title="Permanent link">&para;</a></h2>
+<p>Tinfer supports speculative decoding <strong>with or without</strong> a draft model. You can even combine both methods together.</p>
+<h3 id="1-draft-model-most-common">1. Draft Model (Most Common)<a class="headerlink" href="#1-draft-model-most-common" title="Permanent link">&para;</a></h3>
+<p>A smaller, faster model from the same family generates draft tokens, which are then verified by the main model:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>tinfer<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-m<span class="w"> </span>models/Llama-3.2-8B-Q4_K_M.gguf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-md<span class="w"> </span>models/Llama-3.2-1B-Q4_K_M.gguf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>-p<span class="w"> </span><span class="s2">&quot;Explain quantum computing&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">200</span><span class="w"> </span>-c<span class="w"> </span><span class="m">2048</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Model compatibility</p>
+<p>Both models must share the <strong>same tokenizer</strong> (same model family). Using models from different families will produce incorrect output.</p>
+</div>
+<p><strong>Recommended model pairs:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Tier</th>
-<th>Location</th>
-<th>Behavior</th>
+<th>Main Model (Large)</th>
+<th>Draft Model (Small)</th>
+<th style="text-align: center;">Expected Speedup</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>GPU</strong></td>
-<td>VRAM (permanent)</td>
-<td>Controlled by <code>-ngl</code>, always on GPU</td>
+<td>Llama 3.2 8B</td>
+<td>Llama 3.2 1B</td>
+<td style="text-align: center;">~2-3x</td>
 </tr>
 <tr>
-<td><strong>CPU</strong></td>
-<td>System RAM</td>
-<td>Windowed into GPU staging as needed</td>
+<td>Llama 3.1 70B</td>
+<td>Llama 3.1 8B</td>
+<td style="text-align: center;">~2-4x</td>
 </tr>
 <tr>
-<td><strong>Disk</strong></td>
-<td>GGUF file</td>
-<td>Loaded into CPU cache on demand (LRU eviction)</td>
+<td>Qwen 2.5 14B</td>
+<td>Qwen 2.5 3B</td>
+<td style="text-align: center;">~2-3x</td>
+</tr>
+<tr>
+<td>Mistral 7B</td>
+<td>Mistral 0.5B</td>
+<td style="text-align: center;">~2-3x</td>
 </tr>
 </tbody>
 </table>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Model: 48 layers total, -ngl 5
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Layer 0-42:  CPU tier  ─── windowed through GPU staging ───→ GPU compute
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Layer 43-47: GPU tier  ─── permanently on GPU ──────────────→ GPU compute
+<h3 id="2-draftless-no-extra-model-needed">2. Draftless (No Extra Model Needed)<a class="headerlink" href="#2-draftless-no-extra-model-needed" title="Permanent link">&para;</a></h3>
+<p>These methods use <strong>n-gram pattern matching</strong> from the generated text itself — no second model required. Particularly effective for code refactoring, summarization, and reasoning models.</p>
+<h4 id="ngram-simple">ngram-simple<a class="headerlink" href="#ngram-simple" title="Permanent link">&para;</a></h4>
+<p>Looks for the last matching n-gram in history and uses the following tokens as a draft. Simplest approach with minimal overhead:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--spec-type<span class="w"> </span>ngram-simple<span class="w"> </span>--draft-max<span class="w"> </span><span class="m">64</span>
 </span></code></pre></div>
+<h4 id="ngram-map-k">ngram-map-k<a class="headerlink" href="#ngram-map-k" title="Permanent link">&para;</a></h4>
+<p>Uses a hash-map of n-grams in the current context. More accurate than ngram-simple, requires a minimum number of occurrences before drafting:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>--spec-type<span class="w"> </span>ngram-map-k<span class="w"> </span>--draft-max<span class="w"> </span><span class="m">64</span>
+</span></code></pre></div>
+<h4 id="ngram-mod">ngram-mod<a class="headerlink" href="#ngram-mod" title="Permanent link">&para;</a></h4>
+<p>Lightweight (~16 MB) hash-based approach with constant memory. The hash pool is <strong>shared across all server slots</strong>, so different requests benefit from each other:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--spec-type<span class="w"> </span>ngram-mod<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--spec-ngram-size-n<span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--draft-min<span class="w"> </span><span class="m">48</span><span class="w"> </span>--draft-max<span class="w"> </span><span class="m">64</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Best use cases for draftless methods</p>
 <ul>
-<li><code>-ngl</code> controls how many layers are <strong>permanently</strong> on GPU</li>
-<li><code>--layer-window</code> controls how CPU-tier layers are <strong>temporarily</strong> windowed into GPU</li>
-<li>If <code>-ngl</code> covers all layers, <code>--layer-window</code> has no effect</li>
+<li><strong>Code refactoring</strong> — iterating over existing code blocks</li>
+<li><strong>Reasoning models</strong> — when they repeat thinking in the final answer</li>
+<li><strong>Summarization</strong> — text that overlaps heavily with the input</li>
 </ul>
+</div>
 <hr />
-<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Auto-detect window size based on free VRAM</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span>auto<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Manual window size (4 CPU layers windowed at a time)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span><span class="m">4</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Disable async prefetching (sync transfer only)</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span>auto<span class="w"> </span>--no-layer-prefetch<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">100</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># Works with the server too</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>tinfer-server<span class="w"> </span>-m<span class="w"> </span>model.gguf<span class="w"> </span>-ngl<span class="w"> </span><span class="m">5</span><span class="w"> </span>--layer-window<span class="w"> </span>auto<span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span>
+<h2 id="combining-both-methods">Combining Both Methods<a class="headerlink" href="#combining-both-methods" title="Permanent link">&para;</a></h2>
+<p>You can use a draft model together with a draftless method. When combined, the draftless method takes higher precedence:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>tinfer-server<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>-m<span class="w"> </span>models/large-model.gguf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>-md<span class="w"> </span>models/small-model.gguf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>--spec-type<span class="w"> </span>ngram-simple<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span>--draft-max<span class="w"> </span><span class="m">64</span><span class="w"> </span>--port<span class="w"> </span><span class="m">8080</span><span class="w"> </span>-c<span class="w"> </span><span class="m">2048</span>
 </span></code></pre></div>
 <hr />
-<h2 id="flags">Flags<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h2>
+<h2 id="tuning-parameters">Tuning Parameters<a class="headerlink" href="#tuning-parameters" title="Permanent link">&para;</a></h2>
+<h3 id="draft-token-count">Draft Token Count<a class="headerlink" href="#draft-token-count" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>large.gguf<span class="w"> </span>-md<span class="w"> </span>small.gguf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>--draft-max<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>--draft-min<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span>--draft-p-min<span class="w"> </span><span class="m">0</span>.75<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">200</span><span class="w"> </span>-c<span class="w"> </span><span class="m">2048</span>
+</span></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -1067,59 +1106,165 @@
 </thead>
 <tbody>
 <tr>
-<td><code>--layer-window N</code></td>
-<td><code>0</code> (disabled)</td>
-<td><code>auto</code> = detect from free VRAM, or exact number of layers to window. (env: <code>LLAMA_ARG_LAYER_WINDOW</code>)</td>
+<td><code>--draft-max</code></td>
+<td><code>16</code></td>
+<td>Max tokens to draft per iteration</td>
 </tr>
 <tr>
-<td><code>--no-layer-prefetch</code></td>
-<td>prefetch enabled</td>
-<td>Disable async prefetching of the next window</td>
+<td><code>--draft-min</code></td>
+<td><code>0</code></td>
+<td>Min tokens before verification</td>
+</tr>
+<tr>
+<td><code>--draft-p-min</code></td>
+<td><code>0.75</code></td>
+<td>Min probability for draft acceptance (greedy)</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="how-auto-detection-works">How Auto-Detection Works<a class="headerlink" href="#how-auto-detection-works" title="Permanent link">&para;</a></h2>
-<p>When you use <code>--layer-window auto</code>, the system:</p>
-<ol>
-<li>Measures free VRAM after loading the model</li>
-<li>Calculates the largest layer size</li>
-<li>Determines how many layers can fit in a double-buffered staging area</li>
-<li>Sets the window size accordingly</li>
-</ol>
-<hr />
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>CLI (--layer-window N)
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  → llama_model_params.layer_window / .layer_prefetch
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  → load_tensors(): init window, assign tiers, allocate staging
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  → process_ubatch(): swap_layer_to_gpu → graph_compute → swap_layer_to_cpu
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Phase A (scheduler-level):
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  Prefetch next split&#39;s inputs during current split compute
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Phase B (layer-level):
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  Sliding window of N layers on double-buffered GPU staging
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  Pointer swap preserves graph topology
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Phase C (disk tier):
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  Read layers from GGUF file via direct I/O
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  LRU CPU cache with eviction
+<h3 id="n-gram-parameters-draftless">n-gram Parameters (Draftless)<a class="headerlink" href="#n-gram-parameters-draftless" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--spec-ngram-size-n</code></td>
+<td><code>12</code></td>
+<td>Size of the lookup n-gram (key length)</td>
+</tr>
+<tr>
+<td><code>--spec-ngram-size-m</code></td>
+<td><code>48</code></td>
+<td>Size of the draft m-gram (draft length)</td>
+</tr>
+<tr>
+<td><code>--spec-ngram-min-hits</code></td>
+<td><code>1</code></td>
+<td>Min occurrences before using an n-gram as draft</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gpu-layer-control">GPU Layer Control<a class="headerlink" href="#gpu-layer-control" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>tinfer<span class="w"> </span>-m<span class="w"> </span>large.gguf<span class="w"> </span>-md<span class="w"> </span>small.gguf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>-ngl<span class="w"> </span><span class="m">99</span><span class="w"> </span>-ngld<span class="w"> </span><span class="m">99</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="s2">&quot;Hello!&quot;</span><span class="w"> </span>-n<span class="w"> </span><span class="m">200</span><span class="w"> </span>-c<span class="w"> </span><span class="m">2048</span>
 </span></code></pre></div>
-<h3 id="double-buffered-staging">Double-Buffered Staging<a class="headerlink" href="#double-buffered-staging" title="Permanent link">&para;</a></h3>
-<p>Two staging buffer slots allow computing from one while loading data into the other, enabling overlap of data transfer and computation.</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-ngl</code></td>
+<td>GPU layers for the <strong>main model</strong></td>
+</tr>
+<tr>
+<td><code>-ngld</code></td>
+<td>GPU layers for the <strong>draft model</strong></td>
+</tr>
+<tr>
+<td><code>-cd</code></td>
+<td>Context size for draft model (0 = same as main)</td>
+</tr>
+<tr>
+<td><code>-devd</code></td>
+<td>Device for draft model offloading</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Low VRAM strategy</p>
+<p>Keep draft on CPU (<code>-ngld 0</code>) while main model uses GPU (<code>-ngl 99</code>). The draft model is small enough to run fast on CPU.</p>
+</div>
 <hr />
-<h2 id="key-design-decisions">Key Design Decisions<a class="headerlink" href="#key-design-decisions" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Graph reuse preserved</strong> — only <code>tensor-&gt;data</code> and <code>tensor-&gt;buffer</code> pointers are swapped, graph nodes never change</li>
-<li><strong>Double-buffered staging</strong> — overlap data transfer and computation</li>
-<li><strong>Automatic tensor handling</strong> — adapts to upstream model struct changes automatically</li>
-</ul>
-<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Pinned memory (<code>cudaMallocHost</code>) not yet used (fallback to <code>malloc</code>)</li>
-<li>Disk tier I/O is synchronous reads (not yet producer-consumer queued)</li>
-<li>Not yet tested with speculative decoding or multi-GPU split modes</li>
-</ul>
+<h2 id="reading-statistics">Reading Statistics<a class="headerlink" href="#reading-statistics" title="Permanent link">&para;</a></h2>
+<p>Run with <code>--verbose</code> to see acceptance statistics:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>draft acceptance rate = 0.57576 (171 accepted / 297 generated)
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>statistics draft: #calls = 10, #gen drafts = 10, #acc drafts = 10,
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  #gen tokens = 110, #acc tokens = 98
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>acceptance rate</code></td>
+<td>Fraction of draft tokens accepted by main model</td>
+</tr>
+<tr>
+<td><code>#gen tokens</code></td>
+<td>Total tokens generated by draft (including rejected)</td>
+</tr>
+<tr>
+<td><code>#acc tokens</code></td>
+<td>Tokens accepted by the main model</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Target acceptance rate</p>
+<p>Aim for <strong>&gt; 50% acceptance</strong>. If lower, try a better-matched draft model or reduce <code>--draft-max</code>.</p>
+</div>
+<hr />
+<h2 id="spec-type-reference">Spec Type Reference<a class="headerlink" href="#spec-type-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th style="text-align: center;">Draft Model?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td style="text-align: center;">—</td>
+<td>No speculative decoding (default)</td>
+</tr>
+<tr>
+<td><code>draft</code></td>
+<td style="text-align: center;">✅</td>
+<td>Use a separate draft model</td>
+</tr>
+<tr>
+<td><code>ngram-cache</code></td>
+<td style="text-align: center;">❌</td>
+<td>N-gram cache lookup</td>
+</tr>
+<tr>
+<td><code>ngram-simple</code></td>
+<td style="text-align: center;">❌</td>
+<td>Simple n-gram pattern matching</td>
+</tr>
+<tr>
+<td><code>ngram-map-k</code></td>
+<td style="text-align: center;">❌</td>
+<td>N-gram pattern matching with hash-map keys</td>
+</tr>
+<tr>
+<td><code>ngram-map-k4v</code></td>
+<td style="text-align: center;">❌</td>
+<td>N-gram with up to 4 tracked values (experimental)</td>
+</tr>
+<tr>
+<td><code>ngram-mod</code></td>
+<td style="text-align: center;">❌</td>
+<td>Hash-based n-gram with shared pool across slots</td>
+</tr>
+</tbody>
+</table>
 
 
 
