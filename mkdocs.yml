@@ -50,6 +50,7 @@ nav:
   - Layer Offloading: layer-offloading.md
   - PagedAttention: paged-attention.md
   - KV Cache Eviction: kv-eviction.md
+  - Speculative Decoding: speculative-decoding.md
   - Troubleshooting: troubleshooting.md
 
 markdown_extensions:

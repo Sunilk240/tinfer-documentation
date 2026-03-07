@@ -125,4 +125,5 @@ with Server("model.gguf", port=8080) as s:
 | [Layer Offloading](layer-offloading.md) | Run models larger than VRAM |
 | [PagedAttention](paged-attention.md) | Zero-fragmentation KV cache |
 | [KV Cache Eviction](kv-eviction.md) | Infinite-length generation |
+| [Speculative Decoding](speculative-decoding.md) | Speed up generation with draft models |
 | [Troubleshooting](troubleshooting.md) | Common issues and fixes |
