@@ -329,13 +329,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-via-pip" class="md-nav__link">
+  <a href="#step-1-install-via-pip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install via pip
+        Step 1: Install via pip
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-setup-the-inference-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Setup the Inference Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Setup the Inference Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-automatic-setup-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Automatic Setup (Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-manual-download-for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: Manual Download (For Developers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -753,13 +792,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-via-pip" class="md-nav__link">
+  <a href="#step-1-install-via-pip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install via pip
+        Step 1: Install via pip
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-setup-the-inference-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Setup the Inference Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Setup the Inference Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-automatic-setup-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Automatic Setup (Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-manual-download-for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B: Manual Download (For Developers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -836,16 +914,105 @@
 
 
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
-<h2 id="install-via-pip">Install via pip<a class="headerlink" href="#install-via-pip" title="Permanent link">&para;</a></h2>
+<h2 id="step-1-install-via-pip">Step 1: Install via pip<a class="headerlink" href="#step-1-install-via-pip" title="Permanent link">&para;</a></h2>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>tinfer-ai
 </span></code></pre></div>
-<p>This installs all Tinfer components:</p>
+<p>This installs the Tinfer Python wrapper and the following commands:</p>
 <ul>
 <li><code>tinfer</code> — CLI for chat and text completion</li>
 <li><code>tinfer-server</code> — HTTP server with WebUI</li>
 <li><code>tinfer-bench</code> — Model benchmarking tool</li>
 <li><code>tinfer-quantize</code> — Model quantization tool</li>
+<li><code>tinfer-setup</code> — Inference engine installer</li>
 </ul>
+<h2 id="step-2-setup-the-inference-engine">Step 2: Setup the Inference Engine<a class="headerlink" href="#step-2-setup-the-inference-engine" title="Permanent link">&para;</a></h2>
+<p>After installing the pip package, you need to download the inference engine binary for your system. There are two options:</p>
+<h3 id="option-a-automatic-setup-recommended">Option A: Automatic Setup (Recommended)<a class="headerlink" href="#option-a-automatic-setup-recommended" title="Permanent link">&para;</a></h3>
+<p>Run the setup command — it will automatically detect your OS, CPU, and GPU, then download the correct engine:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tinfer-setup
+</span></code></pre></div>
+<p>You will see output like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>=======================================================
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  Tinfer Setup -- Inference Engine Installer
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>=======================================================
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[Tinfer] OS:   Windows (win)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>[Tinfer] Arch: AMD64 (x64)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>[Tinfer] GPU:  NVIDIA GeForce RTX 3060
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>[Tinfer] Selected Engine: win-x64-cuda
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>[Tinfer] Downloading: tinfer-v0.2.0-win-x64-cuda.zip
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>[########################################] 100% (505.5/505.5 MB)
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>[Tinfer] Extracting to C:\Users\you\.tinfer\bin...
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>[Tinfer] Done! Setup complete!
+</span></code></pre></div>
+<p>The engine is installed to <code>~/.tinfer/bin/</code> and all tinfer commands will automatically use it.</p>
+<h3 id="option-b-manual-download-for-developers">Option B: Manual Download (For Developers)<a class="headerlink" href="#option-b-manual-download-for-developers" title="Permanent link">&para;</a></h3>
+<p>If you prefer to download the engine manually:</p>
+<p><strong>1. Download the correct archive for your platform from the <a href="https://github.com/Sunilk240/tinfer-ai/releases">GitHub Releases</a> page:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>GPU</th>
+<th>Download</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows x64</td>
+<td>NVIDIA CUDA</td>
+<td><a href="https://github.com/Sunilk240/tinfer-ai/releases/download/v0.2.0/tinfer-v0.2.0-win-x64-cuda.zip">tinfer-v0.2.0-win-x64-cuda.zip</a></td>
+</tr>
+<tr>
+<td>Windows x64</td>
+<td>CPU only</td>
+<td><a href="https://github.com/Sunilk240/tinfer-ai/releases/download/v0.2.0/tinfer-v0.2.0-win-x64-cpu.zip">tinfer-v0.2.0-win-x64-cpu.zip</a></td>
+</tr>
+<tr>
+<td>Linux x64</td>
+<td>NVIDIA CUDA</td>
+<td><a href="https://github.com/Sunilk240/tinfer-ai/releases/download/v0.2.0/tinfer-v0.2.0-linux-x64-cuda.tar.gz">tinfer-v0.2.0-linux-x64-cuda.tar.gz</a></td>
+</tr>
+<tr>
+<td>Linux x64</td>
+<td>CPU only</td>
+<td><a href="https://github.com/Sunilk240/tinfer-ai/releases/download/v0.2.0/tinfer-v0.2.0-linux-x64-cpu.tar.gz">tinfer-v0.2.0-linux-x64-cpu.tar.gz</a></td>
+</tr>
+<tr>
+<td>Linux ARM64</td>
+<td>CPU only</td>
+<td><a href="https://github.com/Sunilk240/tinfer-ai/releases/download/v0.2.0/tinfer-v0.2.0-linux-arm64-cpu.tar.gz">tinfer-v0.2.0-linux-arm64-cpu.tar.gz</a></td>
+</tr>
+<tr>
+<td>macOS ARM64 (Apple Silicon)</td>
+<td>Metal</td>
+<td><a href="https://github.com/Sunilk240/tinfer-ai/releases/download/v0.2.0/tinfer-v0.2.0-macos-arm64-metal.tar.gz">tinfer-v0.2.0-macos-arm64-metal.tar.gz</a></td>
+</tr>
+<tr>
+<td>macOS x64 (Intel)</td>
+<td>CPU only</td>
+<td><a href="https://github.com/Sunilk240/tinfer-ai/releases/download/v0.2.0/tinfer-v0.2.0-macos-x64-cpu.tar.gz">tinfer-v0.2.0-macos-x64-cpu.tar.gz</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Extract the downloaded archive to a folder of your choice.</strong></p>
+<p><strong>3. Set the <code>TINFER_ENGINE_PATH</code> environment variable to the extracted folder path:</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows (PowerShell)</label><label for="__tabbed_1_2">Linux / macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">$env:TINFER_ENGINE_PATH</span> <span class="p">=</span> <span class="s2">&quot;D:\path\to\extracted\folder&quot;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">TINFER_ENGINE_PATH</span><span class="o">=</span><span class="s2">&quot;/path/to/extracted/folder&quot;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>After setting the variable, all tinfer commands will use the engine from that custom path.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -861,37 +1028,28 @@
 </tr>
 <tr>
 <td><strong>OS</strong></td>
-<td>Windows (x64)</td>
+<td>Windows (x64), Linux (x64, ARM64), macOS (x64, ARM64)</td>
 </tr>
 <tr>
 <td><strong>GPU</strong> (optional)</td>
-<td>NVIDIA GPU with CUDA support for acceleration</td>
+<td>NVIDIA GPU with CUDA drivers for GPU acceleration</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">GPU is optional</p>
-<p>Tinfer works on CPU-only systems. GPU acceleration speeds up inference but is not required. Models will automatically use your GPU if CUDA is detected.</p>
+<p>Tinfer works on CPU-only systems. GPU acceleration speeds up inference but is not required. When a CUDA-capable GPU is detected, <code>tinfer-setup</code> will automatically download the GPU-accelerated engine.</p>
 </div>
 <h2 id="verify-installation">Verify Installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h2>
-<p>After installing, verify that the commands are available:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Check CLI version</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>tinfer<span class="w"> </span>--version
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Check server version</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>tinfer-server<span class="w"> </span>--version
-</span></code></pre></div>
-<p>You should see output similar to:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ggml_cuda_init: found 1 CUDA devices:
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  Device 0: NVIDIA GeForce ..., compute capability X.X, VMM: yes
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>version: XXXX (commit hash)
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Tinfer build: XXXX (commit) with MSVC XX for x64
+<p>After installing and running setup, verify everything works:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tinfer<span class="w"> </span>--help
 </span></code></pre></div>
 <h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>tinfer-ai
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>tinfer-ai
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>tinfer-setup<span class="w">  </span><span class="c1"># Re-download the engine for the new version</span>
 </span></code></pre></div>
 <h2 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>uninstall<span class="w"> </span>tinfer-ai
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip<span class="w"> </span>uninstall<span class="w"> </span>tinfer-ai
 </span></code></pre></div>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>Once installed, <a href="../models/">download a model</a> and start using Tinfer!</p>
