@@ -79,6 +79,6 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/Sunilk240/tinfer
+      link: https://github.com/Sunilk240/tinfer-code
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/tinfer-ai/
