@@ -82,3 +82,18 @@ Download and install the [Microsoft Visual C++ Redistributable (v14)](https://le
 | **macOS** | macOS 14 Sonoma or newer |
 | **Python** | 3.8 or higher |
 | **GPU** (optional) | NVIDIA GPU with CUDA drivers for acceleration |
+
+---
+
+## Still Need Help?
+
+If your issue isn't listed above or the suggested fix didn't work, please open an issue on GitHub:
+
+:material-github: **[Open an Issue on GitHub](https://github.com/Sunilk240/tinfer-ai/issues)**
+
+When reporting an issue, please include:
+
+- Your **operating system** and version (e.g., Windows 11, Ubuntu 22.04)
+- The **exact error message** you see
+- The **command** you ran
+- Output of `tinfer --version`
